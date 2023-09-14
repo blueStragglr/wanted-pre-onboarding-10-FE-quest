@@ -1,0 +1,67 @@
+* {
+  color: black;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  background-color: beige;
+}
+
+.App {
+  padding: 0.3rem;
+  text-align: center;
+}
+
+/* individual tag */
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+
+nav {
+  width: 100%;
+  height: 5%;
+  border: 1px solid black;
+}
+
+ol {
+  display: inline-block;
+  text-align: left;
+}
+
+ul {
+  padding: 0;
+}
+
+/* nav children */
+
+nav > ul > li {
+  display: inline;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  list-style: none;
+}
+
+/* login page -> form children */
+
+form > input,
+button {
+  display: block;
+  margin: auto;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
