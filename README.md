@@ -1,32 +1,38 @@
-# 10월 원티드 프리온보딩 프론트엔드 사전과제
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-수강생 여러분 안녕하세요 :)
+## Getting Started
 
-10월 프론트엔드 프리온보딩 과정 진행을 위해, 아래의 내용을 읽고 사전 과제를 수행해 주세요.
+First, run the development server:
 
-사전 과제는 해당 레포지토리를 포크하여 시작하시면 되며, Pull Request를 생성해 제출해 주세요.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-제출을 위해 PR을 머지하실 필요는 없습니다. 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-PR을 생성하신 후, 구글 설문지(https://forms.gle/Y4xBHGSgCMdfEA3M6  )를 통해 PR 링크를 제출해 주시면 제출이 완료됩니다.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-## 만들어야 할 것
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-이번 프리온보딩에서는 로그인과 API 호출 등에 대해 다룹니다.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-과정 진행 전 관련 지식의 워밍업을 위해, 아래의 요구사항을 충족하는 페이지를 만들어 주세요.
+## Learn More
 
-### 페이지 1
-- 아이디, 비밀번호를 입력할 수 있는 폼이 있는 페이지
-- 클릭해서 아이디, 비밀번호를 콘솔에 출력할 수 있는 버튼
+To learn more about Next.js, take a look at the following resources:
 
-### 페이지 2
-- Mock API를 이용해 화면에 호출 결과를 출력하는 페이지
-  - 아무 API나 호출하여도 상관 없으며, 포매팅도 아무렇게나 해도 괜찮습니다. API 호출 구문을 작성해 보는 경험을 위한 과제입니다.
-  - 만약 호출할 API가 마땅치 않으면, `'GET', https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock` 를 호출하세요. 혹시 정상적으로 호출되지 않는다면 mockapi.io 에서 새 API를 생성해 주세요.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-페이지의 스타일은 신경쓰지 않아도 괜찮습니다. 생각나는 적절한 로그인 페이지를 모방하여 만들어 주세요.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-곧 강의에서 뵙겠습니다 :)
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
