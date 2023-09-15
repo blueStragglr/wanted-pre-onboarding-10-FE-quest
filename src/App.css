@@ -1,0 +1,49 @@
+:root {
+  --title-color: #000;
+  --main-color: #9ea2e3;
+  --main-color-dark: #787ef1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--title-color);
+}
+
+a:hover {
+  color: var(--main-color-dark);
+  font-weight: 500;
+  justify-content: center;
+}
+
+/* Header */
+.header ul {
+  display: flex;
+  font-size: 20px;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Main body */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.api_list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  place-items: center;
+}
