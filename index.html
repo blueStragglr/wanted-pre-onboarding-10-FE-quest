@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wanted pre onboarding October FE quest</title>
+</head>
+
+<body>
+  <form onsubmit="login(event)">
+    <label for="id">아이디</label>
+    <input name="id" />
+    <label for="password">비밀번호</label>
+    <input name="password" type="password" />
+    <button type="submit">로그인</button>
+  </form>
+
+  <button onclick="mockApi()" style="margin-top: 50px;">call mock API</button>
+  <div id="result"></div>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      const id = event.target[0].value;
+      const password = event.target[1].value;
+      console.log("id: " + id, "\npw: " + password);
+    }
+
+    function mockApi() {
+      const result = document.querySelector("#result");
+      const loading = document.createTextNode("loading ...");
+      result.appendChild(loading);
+
+      fetch("https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock")
+        .then(res => res.json())
+        .then(data => {
+          const div = document.createElement("div");
+          div.innerText = JSON.stringify(data);
+
+          result.removeChild(loading);
+          result.appendChild(div);
+        })
+        .catch(err => {
+          const div = document.createElement("div");
+          div.innerText = JSON.stringify(err);
+
+          result.removeChild(loading);
+          result.appendChild(div);
+        })
+    }
+  </script>
+</body>
+
+</html>
