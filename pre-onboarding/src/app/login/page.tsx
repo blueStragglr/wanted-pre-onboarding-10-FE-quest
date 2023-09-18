@@ -18,11 +18,15 @@ export default function Login() {
             {/* 로그인폼 */}
             <LoginForm />
             {/* 꼬리 */}
-            <div className="text-center">
+            <div className="flex flex-col gap-3 items-center text-center border-t-2 w-3/4 pt-4">
                 <p> 이용약관</p>
                 <strong> 개인정보처리방침</strong>
                 <p> @ Wantedlab, Inc.</p>
-                <p>한국어</p>
+                <select className="text-black w-24" defaultValue={1}>
+                    <option value={1}>한국어</option>
+                    <option value={2}> 영어</option>
+                    <option value={3}> 일본어</option>
+                </select>
             </div>
         </div>
     );
