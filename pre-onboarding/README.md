@@ -1,6 +1,7 @@
 # 10월 원티드 프리온보딩 프론트엔드 사전과제
 
 -   개발환경
+
     React, Next.js (13 App Routing), tailwindCSS, typeScript
 
 ## 페이지 구성
