@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@font-face {
+  src: url("/fonts/Pretendard-Bold.ttf");
+  font-family: "PretendardBold";
+  font-family: 500;
+  font-display: swap;
+}
+@font-face {
+  src: url("/fonts/Pretendard-SemiBold.ttf");
+  font-family: "PretendardSBold";
+  font-family: 500;
+  font-display: swap;
+}
+@font-face {
+  src: url("/fonts/Pretendard-Regular.ttf");
+  font-family: "PretendardRegular";
+  font-family: 500;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PretendardRegular";
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+pre {
+  font-family: "PretendardRegular" !important;
+  margin-bottom: 0 !important;
+  overflow: visible !important;
+}
+
+input,
+button {
+  font-family: "PretendardRegular" !important;
+}
