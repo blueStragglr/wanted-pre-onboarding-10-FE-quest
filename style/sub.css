@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+  max-width: 600px;
+  width: 100%;
+  margin: 5rem auto;
+}
+
+body > h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#dataBox .item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.item .name {
+  width: 15rem;
+}

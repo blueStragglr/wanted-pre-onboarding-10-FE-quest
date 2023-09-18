@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mock api 출력</title>
+    <link rel="stylesheet" href="style/fonts.css" />
+    <link rel="stylesheet" href="style/sub.css" />
+  </head>
+  <body>
+    <h1>MockAPI Data</h1>
+    <div id="dataBox"></div>
+  </body>
+
+  <script type="text/javascript">
+    // MockAPI URL
+    const apiUrl =
+      "https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock";
+
+    // API에서 데이터 가져오기
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        // 데이터 처리 및 출력
+        const containerDiv = document.getElementById("dataBox"); // 최상위 부모 div
+
+        data.map((item) => {
+          const itemDiv = document.createElement("div"); // 각 항목을 위한 부모 div
+          itemDiv.className = "item"; // 스타일링을 위한 클래스 이름 추가
+
+          const nameDiv = document.createElement("div"); // 각 name을 위한 새로운 div 생성
+          nameDiv.innerHTML = `이름 : ${item.name}`; // name 값을 div에 설정
+          nameDiv.className = "name";
+          itemDiv.appendChild(nameDiv); // itemDiv 내부에 nameDiv 추가
+
+          const idDiv = document.createElement("div");
+          idDiv.innerHTML = `아이디 : ${item.id}`;
+          idDiv.className = "id";
+          itemDiv.appendChild(idDiv); // itemDiv 내부에 nameDiv 추가
+
+          containerDiv.appendChild(itemDiv); // 최상위 부모 div에 itemDiv 추가
+        });
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data:", error);
+      });
+  </script>
+</html>
