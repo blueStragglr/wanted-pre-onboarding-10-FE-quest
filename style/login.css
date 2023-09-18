@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.content {
+  padding: 4rem 0rem 6rem;
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  margin: 5rem auto 0;
+}
+
+/* 로그인 폼 */
+form {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+form > .inputs {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs > input {
+  height: 3rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+/* 로그인 텍스트 */
+.contentTitle {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-family: "PretendardSBold";
+  display: flex;
+  justify-content: center;
+}
+
+/* 로그인 버튼 */
+button {
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+  background-color: #f9bbb0;
+  border: none;
+}

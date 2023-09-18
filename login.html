@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/login.css" />
+    <link rel="stylesheet" href="/style/fonts.css" />
+    <title>프리온보딩 FE 챌린지</title>
+  </head>
+  <body>
+    <div class="content">
+      <p class="contentTitle">로그인</p>
+      <form>
+        <div class="inputs">
+          <input placeholder="이메일" type="email" name="email" id="email" />
+          <input
+            placeholder="비밀번호"
+            type="password"
+            name="password"
+            id="password"
+          />
+        </div>
+
+        <button type="button" onclick="btnClick()">로그인</button>
+      </form>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    function btnClick() {
+      const emailValue = document.getElementById("email").value;
+      const passwordValue = document.getElementById("password").value;
+      console.log("이메일:", emailValue);
+      console.log("비밀번호:", passwordValue);
+    }
+  </script>
+</html>
