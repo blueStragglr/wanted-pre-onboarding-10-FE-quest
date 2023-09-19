@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 2</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+  </head>
+  <body>
+    <button>API 호출</button>
+    <ul></ul>
+
+    <script type="text/javascript">
+      const button = document.querySelector("button");
+      const ul = document.querySelector("ul");
+
+      button.addEventListener("click", async (event) => {
+        ul.innerHTML = "loading...";
+        const response = await fetch(
+          "https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock"
+        );
+        const datas = await response.json();
+        ul.innerHTML = "";
+
+        datas.forEach((data) => {
+          const li = document.createElement("li");
+          li.innerText = `${data.id}. ${data.name}`;
+          ul.append(li);
+        });
+      });
+    </script>
+  </body>
+</html>
