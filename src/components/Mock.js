@@ -71,8 +71,8 @@ const Mock = () => {
       >
         {currentItems.map((item) => {
           return (
-            <>
-              <ListItem key={item.id}>
+            <React.Fragment key={item.id}>
+              <ListItem>
                 <ListItemAvatar>
                   <Avatar>
                     <FaceIcon />
@@ -81,7 +81,7 @@ const Mock = () => {
                 <ListItemText primary={item.id} secondary={item.name} />
               </ListItem>
               <Divider />
-            </>
+            </React.Fragment>
           );
         })}
       </List>
