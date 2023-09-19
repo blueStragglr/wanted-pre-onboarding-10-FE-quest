@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 1</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+  </head>
+  <body>
+    <form style="margin: auto">
+      <div>
+        <label for="id">ID</label>
+        <input type="text" name="id" id="id" required />
+      </div>
+      <div>
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" id="password" required />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+
+    <script type="text/javascript">
+      const form = document.querySelector("form");
+      const inputId = document.querySelector("#id");
+      const inputPassword = document.querySelector("#password");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log(`ID: ${inputId.value}, PASSWORD: ${inputPassword.value}`);
+      });
+    </script>
+  </body>
+</html>
