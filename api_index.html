@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 데이터 바인딩 예제</title>
+</head>
+<body>
+    <h1>API 가져오기</h1>
+    <ul id="dataList"></ul>
+
+    <script>
+        fetch('https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                const dataList = document.getElementById('dataList');
+
+                // 데이터를 HTML에 노출시킴
+                data.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<p>이름: <span>${item.name}</span></p>
+                                         <p>ID: <span>${item.id}</span></p>`;
+                    dataList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('error', error);
+            });
+    </script>
+</body>
+</html>
