@@ -5,4 +5,4 @@ loginBtns.addEventListener('click', (event) => {
   event.preventDefault();
   console.log(loginForm.userName.value);
   console.log(loginForm.userPassword.value);
-})
+});
