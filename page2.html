@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page2</title>
+</head>
+<style>
+  body, html {
+    padding: 0;
+    margin: 0;
+  }
+
+  #container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #title {
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .head {
+    font-weight: bold;
+    width: 200px;
+    background-color: #DEE2E6;
+  }
+
+  #id, .head {
+    text-align: center;
+  }
+
+  #name {
+    border-right: 1px solid #DEE2E6;
+  }
+
+  #nameHead {
+    border-right: 1px solid #fff;
+  }
+  
+  #tableContainer {
+    height: 80%;
+  }
+
+  #table {
+    height: 100%;
+    overflow: scroll;
+  }
+
+  #row {
+    border-top: 1px solid #DEE2E6;
+    display:flex;
+  }
+
+  #row:hover {
+    background-color: #F8F9FA;
+  }
+
+  #row > * {
+    font-size: 0.9rem;
+    padding: 5px;
+    width: 200px;
+  }
+
+  
+</style>
+<body>
+  <div id="container">
+    <div id="title">Mock API 호출 결과</div>
+    <div id="tableContainer">
+      <div id="row">
+        <div id="nameHead" class="head">NAME</div>
+        <div id="idHead" class="head">ID</div>
+      </div>
+      <div id="table"></div>
+    </div>
+  </div>
+</body>
+<script>
+  const table = document.querySelector("#table");
+
+  fetch('https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock').then((res) => {
+    return res.json();
+  }).then((data) => {
+    data.forEach((val) => {
+      const row = document.createElement("div");
+      row.setAttribute("id", "row");
+
+      const name = document.createElement("div");
+      name.setAttribute("id", "name");
+      name.innerHTML = val.name;
+      row.appendChild(name);
+
+      const id = document.createElement("div");
+      id.setAttribute("id", "id");
+      id.innerHTML = val.id;
+      row.appendChild(id);
+
+      table.appendChild(row);
+    })
+  });
+</script>
+</html>
