@@ -1,0 +1,28 @@
+.form {
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.button,
+.input {
+  width: 100%;
+  max-width: 510px;
+  height: 30px;
+}
+
+.input {
+  border: 1px solid gray;
+  margin-bottom: 8px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.button {
+  padding: 0;
+}
