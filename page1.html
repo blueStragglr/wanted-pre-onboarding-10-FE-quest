@@ -8,5 +8,17 @@
 <body>
   <input type="text" id="id" placeholder="아이디" />
   <input type="password" id="password" placeholder="비밀번호" />
+  <input type="submit" id="submit" value="아이디 / 비밀번호 출력" />
 </body>
+<script>
+  const id = document.querySelector("#id");
+  const password = document.querySelector("#password");
+  const submit = document.querySelector("#submit");
+
+  submit.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("ID:", id.value);
+    console.log("PASSWORD:", password.value);
+  })
+</script>
 </html>
