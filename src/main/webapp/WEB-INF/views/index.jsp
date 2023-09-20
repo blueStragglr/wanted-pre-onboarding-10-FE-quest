@@ -6,6 +6,7 @@
 </head>
 <script type="text/javascript">
 function callFunction() {
+
     console.log("your id : " + document.querySelector("#id").value);
     console.log("your pw : " + document.querySelector("#pw").value);
 }
