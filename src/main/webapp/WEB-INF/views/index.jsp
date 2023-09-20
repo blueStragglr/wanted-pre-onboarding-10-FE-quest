@@ -4,21 +4,25 @@
     <title>login화면</title>
     <link href="/css/login.css" rel="stylesheet" type="text/css">
 </head>
-
+<script type="text/javascript">
+function callFunction() {
+    console.log("your id : " + document.querySelector("#id").value);
+    console.log("your pw : " + document.querySelector("#pw").value);
+}
+</script>
 <body>
-
 <div class="login-box">
-    <h2>성희의 Login 화면</h2>
-    <form>
+    <h2>Login</h2>
+    <form>0
         <div class="user-box">
-            <input type="text" name="" required="">
+            <input type="text" name="" id="id">
             <label>Username</label>
         </div>
         <div class="user-box">
-            <input type="password" name="" required="">
+            <input type="password" name="" id="pw">
             <label>Password</label>
         </div>
-        <a href="#">
+        <a href="#" onclick="callFunction()">
             <span></span>
             <span></span>
             <span></span>
