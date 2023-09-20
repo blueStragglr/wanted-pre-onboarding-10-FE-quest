@@ -20,7 +20,7 @@ function callAPI() {
 <body>
 <div class="login-box">
     <h2>Login</h2>
-    <form>0
+    <form>
         <div class="user-box">
             <input type="text" name="" id="id" required="">
             <label>Username</label>
