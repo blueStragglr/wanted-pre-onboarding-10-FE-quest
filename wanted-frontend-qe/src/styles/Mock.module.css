@@ -1,0 +1,19 @@
+.mock {
+  padding: 0;
+}
+
+.mock-item {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.mock-id {
+  color: red;
+  font-weight: bold;
+}
+
+.mock-name {
+  text-decoration: underline;
+}
