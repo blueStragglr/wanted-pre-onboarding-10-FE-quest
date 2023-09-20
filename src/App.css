@@ -1,0 +1,64 @@
+.App-container {
+}
+
+.App {
+  background-image: url("./asset/img/background.png");
+  background-size: cover;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+  width: 288px;
+  padding: 0 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6%;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub {
+  color: rgb(59, 59, 59);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.input-container {
+  width: 100%;
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  height: 32px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+  background-color: #fafafa;
+  padding-left: 12px;
+}
+
+.input:focus {
+  border: 1px solid #aaaaaa;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #acacac;
+}
