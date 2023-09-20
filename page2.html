@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page2</title>
+</head>
+<style>
+  .head {
+    font-weight: bold;
+  }
+
+  #row {
+    display:flex;
+  }
+
+  #row > * {
+    display:flex;
+    width: 400px;
+    border: 1px solid black;
+  }
+</style>
+<body>
+  <div id="table">
+    <div id="row">
+      <div id="name" class="head">NAME</div>
+      <div id="id" class="head">ID</div>
+    </div>
+  </div>
+</body>
+<script>
+  const table = document.querySelector("#table");
+
+  fetch('https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock').then((res) => {
+    return res.json();
+  }).then((data) => {
+    data.forEach((val) => {
+      const row = document.createElement("div");
+      row.setAttribute("id", "row");
+
+      const name = document.createElement("div");
+      name.setAttribute("id", "name");
+      name.innerHTML = val.name;
+      row.appendChild(name);
+
+      const id = document.createElement("div");
+      id.setAttribute("id", "id");
+      id.innerHTML = val.id;
+      row.appendChild(id);
+
+      table.appendChild(row);
+    })
+  });
+</script>
+</html>
