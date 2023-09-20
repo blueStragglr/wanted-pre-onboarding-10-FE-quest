@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanted login</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <main>
+        <form action="#">
+            <fieldset>
+                <legend>로그인</legend>
+                <div>
+                    <label for="user_id">아이디</label>
+                    <input type="text" placeholder="아이디를 입력하세요" id="user_id" onchange="onChangeId()">
+                </div>
+                <div>
+                    <label for="user_pw">비밀번호</label>
+                    <input type="password" placeholder="비밀번호를 입력하세요" id="user_pw" onchange="onChangePw()">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
