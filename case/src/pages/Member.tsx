@@ -1,5 +1,5 @@
 import { useState } from 'react';
-export const Member = () => {
+export const Member: React.FC = () => {
     const [userid, setUserid] = useState('');
 
     const [userpw, setUserpw] = useState('');
@@ -7,12 +7,15 @@ export const Member = () => {
     const handleSubmit = (e) => {
         console.log('입력한 아이디 :' + userid);
         console.log('입력한 패스워드 :' + userpw);
+        alert('입력이 완료되었습니다.');
+        setUserid('');
+        setUserpw('');
         e.preventDefault();
     };
     return (
-        <div className="border">
-            <h1 className="bg-blue-300">회원가입</h1>
-            <form onSubmit={handleSubmit}>
+        <div className="border rounded-xl">
+            <h4 className="bg-blue-300">회원가입</h4>
+            <form onSubmit={handleSubmit} className="border rounded-xl flex flex-col">
                 <input
                     type="text"
                     name="userid"
@@ -30,7 +33,9 @@ export const Member = () => {
                     required
                     onChange={(e) => setUserpw(e.target.value)}
                 />
-                <button type="submit">가입</button>
+                <button type="submit" className="button">
+                    가입
+                </button>
             </form>
         </div>
     );
