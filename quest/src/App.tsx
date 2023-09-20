@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Login } from "./pages/Page1";
+import { GetAPI } from "./pages/Page2";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ul>
+        <li>
+          <Link to="/page1">Page1. 로그인</Link>
+        </li>
+        <li>
+          <Link to="/page2">Page2. API 호출</Link>
+        </li>
+      </ul>
+
+      <Routes>
+        <Route path="/page1" element={<Login />} />
+        <Route path="/page2" element={<GetAPI />} />
+      </Routes>
+    </Router>
   );
 }
 
