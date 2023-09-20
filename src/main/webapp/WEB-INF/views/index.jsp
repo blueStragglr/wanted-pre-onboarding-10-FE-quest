@@ -22,11 +22,11 @@ function callAPI() {
     <h2>Login</h2>
     <form>0
         <div class="user-box">
-            <input type="text" name="" id="id">
+            <input type="text" name="" id="id" required="">
             <label>Username</label>
         </div>
         <div class="user-box">
-            <input type="password" name="" id="pw">
+            <input type="password" name="" id="pw" required="">
             <label>Password</label>
         </div>
         <a href="#" onclick="callFunction()">
