@@ -15,6 +15,7 @@ function callAPI() {
     fetch('https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock',{method:"get"})
         .then(res => res.json())
         .then(data => alert(JSON.stringify(data)));
+
 }
 </script>
 <body>
