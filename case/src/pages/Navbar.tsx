@@ -10,7 +10,7 @@ const Navbar = () => {
             </Link>
 
             <Link to="/apicall" className="border p-2  rounded-xl">
-                API호출확인
+                API호출
             </Link>
         </div>
     );
