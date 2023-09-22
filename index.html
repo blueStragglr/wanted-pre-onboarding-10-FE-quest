@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      .link {
+        text-decoration: none;
+        font-size: 18px;
+        color: #ffffff;
+        background-color: #000;
+        padding: 8px;
+        box-shadow: #000 2px 2px 8px 0;
+        &:visited {
+          color: #ffffff;
+        }
+        &:active {
+          background-color: gray;
+        }
+      }
+    }
+    .myform {
+      width: 500px;
+      text-align: left;
+      margin-inline: auto;
+      border: 1px solid black;
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .input-box {
+      margin-block: 20px;
+      .label {
+        display: inline-block;
+        vertical-align: middle;
+        width: 20%;
+        height: 30px;
+        font-size: 24px;
+      }
+      .input {
+        width: 50%;
+        font-size: 18px;
+        height: 30px;
+        margin-left: 20px;
+      }
+    }
+    .btn-box {
+      text-align: right;
+    }
+    .submit-btn {
+      display: inline-block;
+      border: none;
+      background-color: #000;
+      color: #ffffff;
+      padding: 8px;
+      border-radius: 8px;
+      margin-left: auto;
+      cursor: pointer;
+      &:active {
+        background-color: gray;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <a class="link" href="/index.html">page1</a>
+      <a class="link" href="/page2.html">page2</a>
+    </nav>
+    <h1>Page 1</h1>
+    <div class="myform">
+      <form id="my_form">
+        <div class="input-box">
+          <label class="label" for="user_id"> Id: </label>
+          <input class="input" type="text" id="user_id" autocomplete="off" />
+        </div>
+        <div class="input-box">
+          <label class="label" for="user_pw"> Password: </label>
+          <input
+            class="input"
+            type="password"
+            id="user_pw"
+            autocomplete="off"
+          />
+        </div>
+        <div class="btn-box">
+          <button class="submit-btn" id="submit_btn">Write to Console</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const $Id = document.getElementById("user_id");
+      const $Password = document.getElementById("user_pw");
+      const $Form = document.getElementById("my_form");
+
+      $Form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log("Id: " + $Id.value, "Password: " + $Password.value);
+      });
+    </script>
+  </body>
+</html>
