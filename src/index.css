@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-gray-100: #f4f3f1;
+  --color-gray-200: #dddbd8;
+  --color-gray-300: #ccc9c6;
+  --color-gray-400: #aeaba7;
+  --color-gray-500: #8a8784;
+  --color-gray-600: #656360;
+  --color-gray-700: #4b4a47;
+  --color-gray-800: #31302e;
+  --color-gray-900: #1f1d1b;
+
+  --color-primary-100: #f8ffde;
+  --color-primary-200: #f0ffbe;
+  --color-primary-300: #e6ff9c;
+  --color-primary-400: #dbff79;
+  --color-primary-500: #bfff00;
+  --color-primary-600: #9dd014;
+  --color-primary-700: #7ca21a;
+  --color-primary-800: #5d771a;
+  --color-primary-900: #3f4e17;
+
+  --color-sub-100: #4000ff;
+  --color-sub-200: #3c0cd0;
+  --color-sub-300: #3611a3;
+  --color-sub-400: #2e1277;
+  --color-sub-500: #24114f;
+
+  --color-error-light: #ce0000;
+  --color-error-dark: #c11c0a;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
