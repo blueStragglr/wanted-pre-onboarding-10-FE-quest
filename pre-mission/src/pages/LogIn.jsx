@@ -1,4 +1,5 @@
 import React from 'react';
+import SignIn from '../components/SignIn';
 import { Link } from 'react-router-dom';
 
 const LogIn = () => {
@@ -7,7 +8,7 @@ const LogIn = () => {
         <>
             <div>
                 <Link to='/'></Link>
-                LogIn
+                <SignIn />
             </div>
         </>
     )
