@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      margin-inline: auto;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      .link {
+        text-decoration: none;
+        font-size: 18px;
+        color: #ffffff;
+        background-color: #000;
+        padding: 8px;
+        box-shadow: #000 2px 2px 8px 0;
+        &:visited {
+          color: #ffffff;
+        }
+        &:active {
+          background-color: gray;
+        }
+      }
+    }
+    .list-box {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      > li {
+        margin-block: 8px;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <a class="link" href="/index.html">page1</a>
+      <a class="link" href="/page2.html">page2</a>
+    </nav>
+
+    <h1>Page 2</h1>
+
+    <ul id="list-box" class="list-box"></ul>
+    <script>
+      const $listBox = document.getElementById("list-box");
+
+      fetch("https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock")
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error("HTTP Error!");
+          }
+
+          return res.json();
+        })
+        .then((data) => {
+          const $fragment = document.createDocumentFragment();
+
+          data.forEach((item) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${item.id}. ${item.name}`;
+            $fragment.appendChild(listItem);
+          });
+
+          $listBox.appendChild($fragment);
+        });
+    </script>
+  </body>
+</html>
