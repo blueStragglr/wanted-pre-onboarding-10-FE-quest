@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- the props -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props"/>
+
+    <!-- optional imports that use the props -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css"/>
+
+    <!-- individual imports -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/open-props/easings.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/open-props/animations.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/open-props/sizes.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/open-props/gradients.min.css"/>
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+    <div class="wrap_main">
+
+        <h1>로그인</h1>
+        <form action="">
+            <div>
+                <input type="text" placeholder="아이디" name="user_id">
+            </div>
+            <div>
+                <input type="password" placeholder="비밀번호" name="user_pw">
+            </div>
+            <div class="btm_submit">
+                <input type="submit" value="제출">
+            </div>
+        </form>
+
+        <button type="button" name="btn_print" onclick="onClickPrint()">정보 console 출력</button>
+    </div>
+
+    
+    
+</body>
+<script type="text/javascript" src="./index.js"></script>
+</html>

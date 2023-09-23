@@ -1,0 +1,65 @@
+body{
+    background-color: var(--gray-1);
+}
+
+input[type="submit"],
+button{
+    border: none;
+}
+
+.wrap_main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--gray-0);
+    padding: var(--size-8);
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-6);
+}
+
+h1{
+    margin-bottom: var(--size-fluid-3);
+    color: var(--purple-6);
+}
+
+form > div{
+    margin-bottom: var(--size-fluid-2);
+    font-size: var(--font-size-3);
+}
+
+form input{
+    padding-block: var(--size-2);
+    background-color: var(--gray-1);
+    padding-inline: var(--size-3);
+    color: var(--gray-8);
+}
+
+input[name="user_id"]::placeholder,
+input[name="user_pw"]::placeholder{
+    color: var(--gray-5);
+}
+
+form .user_pw input[name="user_id"]:focus-visible,
+form .user_id input[name="user_pw"]:focus-visible{
+    outline-color: var(--purple-6);
+}
+
+.btm_submit{
+    text-align: center;
+}
+
+input[type="submit"]{
+    width: 100%;
+    background-color: var(--purple-6);
+    color: var(--gray-0);
+    font-weight: var(--font-weight-3);
+}
+
+/* mock api */
+.mock_wrap caption{
+    color: var(--gray-8);
+}
