@@ -1,0 +1,170 @@
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  font-family: -apple-system, BlinkMacSystemFont, helvetica, 'Apple SD Gothic Neo', sans-serif;
+}
+
+.header_inner {
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .login_wrap {
+  box-sizing: border-box;
+  width: 460px;
+  margin: 0 auto;
+}
+#formLogin {
+  display: block;
+}
+.login_wrap .panel_wrap {
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+.login_wrap .panel_wrap > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.login_wrap .panel_wrap .panel_item {
+  display: block;
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 5px 8px 0 rgba(68, 68, 68, 0.04);
+}
+.login_wrap .panel_wrap .panel_item .pannel_inner {
+  padding: 20px 28px;
+}
+.login_wrap .panel_wrap .id_pw_wrap {
+  display: block;
+}
+.id_pw_wrap .input_row:first-child {
+  border-radius: 6px 6px 0 0;
+  box-shadow: none;
+}
+.id_pw_wrap .input_row:last-child {
+  border-radius: 0 0 6px 6px;
+}
+.id_pw_wrap .input_row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: 14px 17px 13px;
+  box-sizing: border-box;
+}
+.input_row + .input_row {
+  margin-top: -1px;
+}
+.input_row {
+  position: relative;
+  height: 100%;
+  border: 1px solid #dadada;
+  text-align: left;
+  display: inline-block;
+}
+.id_pw_wrap .input_row .input_text {
+  display: table-cell;
+  padding-right: 20px;
+}
+.icon_cell {
+  display: table-cell;
+  width: 24px;
+  vertical-align: middle;
+}
+.input_text {
+  border-radius: 0;
+  border: none;
+  background: 0 0;
+  width: 85%;
+  margin-left: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-size-adjust: none;
+}
+.input_text:focus {
+  background: #ffe6e2;
+}
+.btn_delete {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 35px;
+  height: 35px;
+  z-index: 5;
+  background-color: #fff;
+}
+.icon_delete {
+  display: inline-block;
+  margin: 8px 0 0 8px;
+  background-position: -244px -187px;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+}
+.btn_login_wrap {
+  margin-top: 30px;
+}
+.btn_login {
+  display: block;
+  width: 100%;
+  padding: 13px 0 13px;
+  border-radius: 6px;
+  border: solid 1px rgba(255, 255, 255, 0.15);
+  background-color: #ffcdc5;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.footer_inner {
+  position: fixed;
+  bottom: 5px;
+  width: 100vw;
+}
+.footer_inner .footer_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+.footer_link .footer_item {
+  margin-right: 2rem;
+}
