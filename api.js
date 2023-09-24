@@ -12,7 +12,6 @@ function showAPI(data) {
   for (let i = 0; i < data.length; i++) {
     let dataDiv = document.createElement("div");
     dataDiv.innerHTML = data[i].id + ". " + data[i].name;
-    console.log(dataDiv.innerHTML);
     dataDiv.setAttribute("class", "DataBox");
     ApiTextBox.appendChild(dataDiv);
   }
