@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+@layer components {
+    .flexCenter {
+        @apply flex flex-col justify-center items-center;
+    }
+    .inputComponent {
+        @apply w-[40rem] h-16 text-2xl p-4 mb-8 outline-none;
+    }
+
+    .searchComponent {
+        @apply w-[80%] h-[4rem] border-[3px] rounded-full text-2xl mt-10 px-[2rem] border-blue;
+    }
+
+    .navComponent {
+        @apply mr-[2rem] text-2xl hover:font-semibold no-underline before:text-black visited:text-black;
+    }
+
+    .footerBox {
+        @apply  flex flex-col justify-around m-[2rem]
+    }
+
+    .footerTitle {
+        @apply text-[1.3rem] font-medium
+    }
+
+    .footerContent {
+        @apply w-[31rem] text-[1.3rem] font-light
+    }
+
+    .footerLink {
+        @apply text-white mr-[2rem] no-underline
+    }
+}
