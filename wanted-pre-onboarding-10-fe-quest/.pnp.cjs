@@ -31,12 +31,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.2.22"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["@vitejs/plugin-react", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:4.1.0"],\
+            ["autoprefixer", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:10.4.16"],\
             ["eslint", "npm:8.50.0"],\
             ["eslint-plugin-react", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:7.33.2"],\
             ["eslint-plugin-react-hooks", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:0.4.3"],\
+            ["postcss", "npm:8.4.30"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:18.2.0"],\
+            ["react-hook-form", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:7.46.2"],\
+            ["react-router-dom", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:6.16.0"],\
             ["tailwindcss", "npm:3.3.3"],\
             ["vite", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:4.4.9"]\
           ],\
@@ -800,6 +804,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@remix-run/router", [\
+        ["npm:1.9.0", {\
+          "packageLocation": "./.yarn/cache/@remix-run-router-npm-1.9.0-5b4ae8d56b-0537b0ff29.zip/node_modules/@remix-run/router/",\
+          "packageDependencies": [\
+            ["@remix-run/router", "npm:1.9.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@tootallnate/once", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-2.0.0-e36cf4f140-ad87447820.zip/node_modules/@tootallnate/once/",\
@@ -1191,6 +1204,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["asynciterator.prototype", "npm:1.0.0"],\
             ["has-symbols", "npm:1.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["autoprefixer", [\
+        ["npm:10.4.16", {\
+          "packageLocation": "./.yarn/cache/autoprefixer-npm-10.4.16-e5a0ee424d-45fad70864.zip/node_modules/autoprefixer/",\
+          "packageDependencies": [\
+            ["autoprefixer", "npm:10.4.16"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:10.4.16", {\
+          "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-7aedcbfd13/0/cache/autoprefixer-npm-10.4.16-e5a0ee424d-45fad70864.zip/node_modules/autoprefixer/",\
+          "packageDependencies": [\
+            ["autoprefixer", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:10.4.16"],\
+            ["@types/postcss", null],\
+            ["browserslist", "npm:4.21.11"],\
+            ["caniuse-lite", "npm:1.0.30001538"],\
+            ["fraction.js", "npm:4.3.6"],\
+            ["normalize-range", "npm:0.1.2"],\
+            ["picocolors", "npm:1.0.0"],\
+            ["postcss", "npm:8.4.30"],\
+            ["postcss-value-parser", "npm:4.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/postcss",\
+            "postcss"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2139,6 +2180,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["foreground-child", "npm:3.1.1"],\
             ["cross-spawn", "npm:7.0.3"],\
             ["signal-exit", "npm:4.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["fraction.js", [\
+        ["npm:4.3.6", {\
+          "packageLocation": "./.yarn/cache/fraction.js-npm-4.3.6-233f81170c-e96ae77e64.zip/node_modules/fraction.js/",\
+          "packageDependencies": [\
+            ["fraction.js", "npm:4.3.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3353,6 +3403,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["normalize-range", [\
+        ["npm:0.1.2", {\
+          "packageLocation": "./.yarn/cache/normalize-range-npm-0.1.2-bec5e259e2-9b2f14f093.zip/node_modules/normalize-range/",\
+          "packageDependencies": [\
+            ["normalize-range", "npm:0.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["npmlog", [\
         ["npm:6.0.2", {\
           "packageLocation": "./.yarn/cache/npmlog-npm-6.0.2-e0e69455c7-ae238cd264.zip/node_modules/npmlog/",\
@@ -3825,6 +3884,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-hook-form", [\
+        ["npm:7.46.2", {\
+          "packageLocation": "./.yarn/cache/react-hook-form-npm-7.46.2-b550f77a57-5ad2b47833.zip/node_modules/react-hook-form/",\
+          "packageDependencies": [\
+            ["react-hook-form", "npm:7.46.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:7.46.2", {\
+          "packageLocation": "./.yarn/__virtual__/react-hook-form-virtual-596aea92cc/0/cache/react-hook-form-npm-7.46.2-b550f77a57-5ad2b47833.zip/node_modules/react-hook-form/",\
+          "packageDependencies": [\
+            ["react-hook-form", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:7.46.2"],\
+            ["@types/react", "npm:18.2.22"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-is", [\
         ["npm:16.13.1", {\
           "packageLocation": "./.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-f7a19ac349.zip/node_modules/react-is/",\
@@ -3839,6 +3920,57 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/react-refresh-npm-0.14.0-78ef5eeb73-dc69fa8c99.zip/node_modules/react-refresh/",\
           "packageDependencies": [\
             ["react-refresh", "npm:0.14.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-router", [\
+        ["npm:6.16.0", {\
+          "packageLocation": "./.yarn/cache/react-router-npm-6.16.0-611c42fc54-b31c187e3f.zip/node_modules/react-router/",\
+          "packageDependencies": [\
+            ["react-router", "npm:6.16.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:224602d976bdda78f6ea97bb6952df7a0522a55deff58347064e6e6cfaebd2ea264cc836547b83b61c4cf5d5b8f805012194e8450cd53bad7852a6344d002b7b#npm:6.16.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-router-virtual-ebb1795d21/0/cache/react-router-npm-6.16.0-611c42fc54-b31c187e3f.zip/node_modules/react-router/",\
+          "packageDependencies": [\
+            ["react-router", "virtual:224602d976bdda78f6ea97bb6952df7a0522a55deff58347064e6e6cfaebd2ea264cc836547b83b61c4cf5d5b8f805012194e8450cd53bad7852a6344d002b7b#npm:6.16.0"],\
+            ["@remix-run/router", "npm:1.9.0"],\
+            ["@types/react", "npm:18.2.22"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-router-dom", [\
+        ["npm:6.16.0", {\
+          "packageLocation": "./.yarn/cache/react-router-dom-npm-6.16.0-2abe83c2e4-18b398924b.zip/node_modules/react-router-dom/",\
+          "packageDependencies": [\
+            ["react-router-dom", "npm:6.16.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:6.16.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-router-dom-virtual-224602d976/0/cache/react-router-dom-npm-6.16.0-2abe83c2e4-18b398924b.zip/node_modules/react-router-dom/",\
+          "packageDependencies": [\
+            ["react-router-dom", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:6.16.0"],\
+            ["@remix-run/router", "npm:1.9.0"],\
+            ["@types/react", "npm:18.2.22"],\
+            ["@types/react-dom", "npm:18.2.7"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:18.2.0"],\
+            ["react-router", "virtual:224602d976bdda78f6ea97bb6952df7a0522a55deff58347064e6e6cfaebd2ea264cc836547b83b61c4cf5d5b8f805012194e8450cd53bad7852a6344d002b7b#npm:6.16.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4631,12 +4763,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.2.22"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["@vitejs/plugin-react", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:4.1.0"],\
+            ["autoprefixer", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:10.4.16"],\
             ["eslint", "npm:8.50.0"],\
             ["eslint-plugin-react", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:7.33.2"],\
             ["eslint-plugin-react-hooks", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:0.4.3"],\
+            ["postcss", "npm:8.4.30"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:18.2.0"],\
+            ["react-hook-form", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:7.46.2"],\
+            ["react-router-dom", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:6.16.0"],\
             ["tailwindcss", "npm:3.3.3"],\
             ["vite", "virtual:60562b791f3f5bee5448ceff584fdb29c5687f55edb209f51caa5eb0cb7bcbe49a6759aee265cabffe2739d8ebbeed8639cdd4340edddb40a045cdc8625e6a92#npm:4.4.9"]\
           ],\
