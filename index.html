@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function handleLogin(e) {
+        e.preventDefault();
+        const username = document.getElementById("username");
+        const password = document.getElementById("password");
+        console.log(username.value, password.value);
+        username.value = "";
+        password.value = "";
+      }
+
+      function handleFetch() {
+        const url =
+          "https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock";
+
+        fetch(url)
+          .then((res) => {
+            if (!res.ok) {
+              throw new Error("네트워크 응답이 실패했습니다.");
+            }
+            return res.text(); // 응답을 텍스트로 변환
+          })
+          .then((data) => {
+            // 텍스트 데이터를 textarea에 출력
+            const textarea = document.querySelector("textarea");
+            textarea.value = data;
+          })
+          .catch((error) => {
+            console.error("오류 발생:", error);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      style="
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <form
+        style="
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+          width: 300px;
+        "
+      >
+        <label> 원티드 프리온보딩 사전과제: 로그인 </label>
+        <input id="username" type="text" placeholder="UserID" />
+        <input id="password" type="password" placeholder="Password" />
+        <button onclick="onLogin(event)">로그인</button>
+      </form>
+      <div
+        style="
+          width: 400px;
+          height: 1px;
+          background-color: black;
+          margin-top: 20px;
+        "
+      ></div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+          margin-top: 30px;
+          width: 300px;
+        "
+      >
+        <textarea readonly cols="30" rows="10"></textarea>
+        <button onclick="handleFetch()">GET</button>
+      </div>
+    </div>
+  </body>
+</html>
