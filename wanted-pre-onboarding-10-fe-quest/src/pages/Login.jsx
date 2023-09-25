@@ -23,7 +23,7 @@ export default function Login() {
       <div className="w-full max-w-sm m-auto">
         <header className="pt-20 mb-10">
           <h1 className="text-center text-blue-200 pb-10">
-            로그인 시연 페이지 입니다 ✅
+            페이지1 : 로그인 시연 페이지 입니다 ✅
           </h1>
           <h2
             className="
@@ -74,6 +74,9 @@ export default function Login() {
             <div className="py-4">
               <button className="h-12 w-full border rounded-md shadow-sm bg-blue-400 font-bold text-white ">
                 로그인
+              </button>
+              <button className="h-12 w-full border rounded-md shadow-sm bg-blue-200 font-bold text-white mt-20">
+                <a href="/mock">Mock API 페이지로 이동</a>
               </button>
             </div>
           </form>
