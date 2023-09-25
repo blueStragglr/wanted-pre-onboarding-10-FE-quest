@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="login">
+        <figure class="login__logo">
+          <img src="img/logo.PNG" alt="" class="login__image" />
+        </figure>
+        <h1 class="login__title">안녕하세요, 반가워요!</h1>
+        <form class="form">
+          <div class="login__content">
+            <div class="login__username-wrap">
+              <span class="login__username-icon"> </span>
+              <input
+                class="login__username"
+                name="username"
+                type="text"
+                placeholder="아이디"
+                required
+              />
+            </div>
+            <div class="login__password-wrap">
+              <span class="login__password-icon"></span>
+              <input
+                class="login__password"
+                name="password"
+                type="password"
+                placeholder="비밀번호"
+                required
+              />
+            </div>
+            <button class="login__submit" type="submit">로그인</button>
+
+            <div class="login__google"></div>
+          </div>
+        </form>
+      </section>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.login {
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.login__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #474747;
+  text-align: center;
+}
+
+.login__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.login__image {
+  width: 150px;
+  margin: 20px;
+}
+
+.login__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.login__username-wrap {
+  margin: 0 25px 5px 0;
+  width: 215px;
+  display: flex;
+  align-items: center;
+}
+
+.login__username {
+  padding-top: 3px;
+  width: 190px;
+  height: 30px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.login__username::placeholder {
+  color: #ddd;
+}
+
+.login__username:focus {
+  outline: none;
+}
+
+.login__username-icon {
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/user.png) no-repeat;
+  background-size: cover;
+}
+
+.login__password-wrap {
+  margin: 0 30px 20px 0;
+  width: 220px;
+  display: flex;
+}
+
+.login__password {
+  padding-top: 3px;
+  width: 190px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.login__password::placeholder {
+  color: #ddd;
+}
+
+.login__password:focus {
+  outline: none;
+}
+
+.login__password-icon {
+  display: inline-block;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/password.png) no-repeat;
+  background-size: cover;
+}
+
+.login__submit {
+  width: 190px;
+  height: 40px;
+  font-size: 14px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.login__submit:hover {
+  background-color: #ddd;
+  transition: 0.4s;
+}
+
+.login__google {
+  width: 190px;
+  height: 46px;
+  background: url(../img/btn_google_signin_light_normal_web.png);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.login__google:hover {
+  background: url(../img/btn_google_signin_light_pressed_web.png);
+  transition: 0.4s;
+}
