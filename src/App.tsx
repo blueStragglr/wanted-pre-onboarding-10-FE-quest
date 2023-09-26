@@ -1,4 +1,4 @@
-import "./App.css";
+//import "./App.css";
 import Page1 from "./page/Page1";
 
 function App() {
