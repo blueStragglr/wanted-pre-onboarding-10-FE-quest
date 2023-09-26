@@ -27,15 +27,11 @@ body {
   color: #202124;
 }
 a {
-  color: #1a0dab;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
-a:visited {
-  color: #609;
-}
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 cite,
 cite a:link,
