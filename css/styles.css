@@ -1,0 +1,23 @@
+@import "reset.css";
+
+/* div {
+  display: block;
+} */
+
+.content {
+  margin: auto 0;
+  padding: 10%;
+}
+.login_wrap {
+  box-sizing: border-box;
+  width: 460px;
+  margin: 0 auto;
+  background-color: aliceblue;
+}
+.input_row {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input_row > input {
+}

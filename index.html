@@ -3,27 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <title>프리온보딩 로그인</title>
   </head>
   <body>
     <!-- content -->
     <div class="content">
       <div class="login_wrap">
-        <form>
-            <div class="id_pw_wrap">
-                <div class="input_row">
-                    <input type="text" id="id" name="id" placeholder="아이디" title="아이디" class=""input_text" maxlength="41" value>
-                </div>
-                <div class="input_row">
-                    <input type="password" id="pw" name="pw" placeholder="비밀번호" title="비밀번호" class=""input_text" maxlength="16">
-                </div>
+        <form id="login_form">
+          <div class="id_pw_wrap">
+            <div class="input_row">
+              <input type="text" id="id" name="id" placeholder="아이디"
+              title="아이디" class=""input_text" maxlength="41" value>
             </div>
+            <div class="input_row">
+              <input type="password" id="pw" name="pw" placeholder="비밀번호"
+              title="비밀번호" class=""input_text" maxlength="16">
+            </div>
+          </div>
+          <div class="btn_login_wrap">
+            <button type="submit" class="btn_login">
+              <span class="btn_text">로그인</span>
+            </button>
+          </div>
         </form>
-        <div class="btn_login_wrap">
-          <button type="submit class="btn_login">
-            <span class="btn_text">로그인</span></button>
-        </div>
       </div>
     </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
