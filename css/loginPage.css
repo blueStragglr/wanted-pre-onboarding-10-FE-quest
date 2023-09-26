@@ -1,0 +1,63 @@
+@import "reset.css";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+}
+
+h1 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form {
+    width: 20rem;
+}
+
+input, button {
+    width: 100%;
+    height: 2rem;
+    padding: 4px 10px;
+    font-size: 14px;
+    
+}
+
+input:first-child {
+    border: 1px solid #c1c1c1;
+    border-radius: 10px 10px 0 0;
+}
+
+input:nth-child(2) {
+    border: 1px solid #c1c1c1;
+    border-top-width: 0px;
+    border-radius: 0 0 10px 10px;
+}
+
+input:focus {
+    border: 1px solid #0077ed;
+}
+
+p {
+    margin: 1rem 0;
+    font-size: 14px;
+    color: #ff2c2c;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0077ed;
+    padding: 20px 10px;
+    border: 1px solid #0077ed;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}

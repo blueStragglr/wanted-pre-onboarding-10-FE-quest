@@ -1,0 +1,39 @@
+@import "reset.css";
+
+.none {
+    display: none;
+}
+
+body {
+    margin-left: 2rem;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+table {
+    border: 1px solid #787878;
+}
+
+tr, td, th {
+    border: 1px solid #787878;
+}
+
+tr {
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #f0f0f0;
+    padding: 0.5rem 0.5rem;
+    font-weight: bold;
+}
+
+td {
+    padding: 1rem 1rem;
+}
+
