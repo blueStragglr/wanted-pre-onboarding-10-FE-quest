@@ -134,3 +134,23 @@
   background: url(../img/btn_google_signin_light_pressed_web.png);
   transition: 0.4s;
 }
+
+.next__link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.next__text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+}
+
+.next__image {
+  padding: 5px 5px 0;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  cursor: pointer;
+}
