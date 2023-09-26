@@ -1,0 +1,87 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login {
+  width: 50%;
+  height: 50vh;
+  background-image: linear-gradient(to left, #67ff5f, #fd6c64);
+  /* --color-green: #67FF5F;
+  --color-red: #FD6C64; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 400px;
+
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#id,
+#pwd {
+  position: relative;
+  width: 360px;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #f4f4f5;
+  border-radius: 4px;
+  background-color: #f4f4f5;
+  outline: none;
+  font-size: 15px;
+  line-height: 20px;
+  color: #25282b;
+}
+
+#pwd {
+  margin-top: 10px;
+}
+
+#btn {
+  margin-top: 30px;
+  width: 100%;
+  height: 46px;
+  border: 1px solid #25282b;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #25282b;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+
+  cursor: pointer;
+}
+
+.next {
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+.next a {
+  color: #25282b;
+}

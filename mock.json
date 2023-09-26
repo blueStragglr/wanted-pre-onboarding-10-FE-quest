@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "안녕하세요",
+      "lang": "한국어",
+      "city": "서울"
+    },
+    {
+      "id": 2,
+      "title": "Hello",
+      "lang": "영어",
+      "city": "워싱턴"
+    },
+    {
+      "id": 3,
+      "title": "bonjour",
+      "lang": "불어",
+      "city": "파리"
+    }
+  ]
+}
