@@ -1,6 +1,7 @@
 function App() {
   return (
     <>
+      하이
     </>
   )
 }
