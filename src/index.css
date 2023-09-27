@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  padding: 2rem;
+}
+
+main {
+  margin: 0 auto;
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main input,
+main button {
+  font-size: 1.5rem;
+}
+
+.form-section,
+.api-section {
+  margin: 1rem;
+}
+
+.api-section table {
+  margin: 2rem;
+  width: 100%;
+}
+
+.api-section table th,
+.api-section table td {
+  border: 1px solid black;
+  padding: 1rem;
+}
