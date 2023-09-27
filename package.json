@@ -1,0 +1,30 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.9",
+    "@mui/material": "^5.14.10",
+    "@types/node": "20.6.3",
+    "@types/react": "18.2.22",
+    "@types/react-dom": "18.2.7",
+    "@types/uuid": "^9.0.4",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.5.2",
+    "eslint-plugin-prettier": "^5.0.0",
+    "next": "13.5.2",
+    "prettier": "^3.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.2.2",
+    "uuid": "^9.0.1"
+  }
+}
