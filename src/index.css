@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root[color-theme="dark"] {
+  --color-scheme: dark;
+  --background-color: #000;
+  --text-color: #fff;
+}
+:root[color-theme="light"] {
+  --color-scheme: light;
+  --background-color: #fff;
+  --text-color: #000;
+}
+
+:root {
+  color-scheme: var(--color-scheme);
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+button {
+  padding: 5px 10px;
+  outline: none;
+  background: none;
+  border: 1px solid;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+input {
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#login input {
+  display: block;
+  margin-bottom: 10px;
+}
+#login button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#api ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0;
+}
+#api ul li {
+  border: 1px solid;
+  padding: 10px;
+}
+
+#wrap {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 1fr 8fr 1fr;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+  gap: 20px;
+  border-bottom: 1px solid;
+  height: 60px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: main;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  border-top: 1px solid;
+  height: 60px;
+}
+
+footer svg {
+  height: 22px;
+}
+
+:root[color-theme="dark"] footer svg {
+  fill: #fff;
+}
