@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* color */
+  --color-black-100: #202020;
+  --color-black-200: #070707;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-skyBlue: #e9f0fd;
+  --color-green: #65d26e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+
+  padding: 60px 0;
+
+  background-image: linear-gradient(
+    var(--color-black-100),
+    var(--color-black-200)
+  );
+}
