@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="text"></p>
+
+    <script>
+      const text = document.getElementById("text");
+
+      fetch("https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          text.innerHTML = data
+            .map((item) => `name : ${item.name} / id : ${item.id}<br />`)
+            .join("");
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    </script>
+  </body>
+</html>

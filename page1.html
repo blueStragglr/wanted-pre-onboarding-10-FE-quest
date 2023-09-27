@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label>아이디</label>
+      <input type="text" id="id" name="id" placeholder="아이디" />
+      <label>비밀번호</label>
+      <input type="password" id="pw" name="pw" placeholder="비밀번호" />
+      <button type="button" onclick="clickHandler()">로그인</button>
+    </form>
+
+    <script>
+      let id = document.querySelector("#id");
+      let pw = document.querySelector("#pw");
+      function clickHandler() {
+        console.log("id : ", id.value, ", pw : ", pw.value);
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+✅ getElementById와 querySelector의 차이??
+- 둘 다 DOM(문서 객체 모델)에서 요소를 선택하는 메서드
+
+* getElementById
+    - 문서 내 고유한 id를 가진 요소를 선택
+    - 해당 요소 자체가 반환값
+
+* querySelector
+    - css선택자를 사용하여 요소 선택(id인지 class인지 구분이 안되므로)
+    - 선택자에 일치하는 첫번째 요소 반환
+    ex) const elementById = document.getElementById("myDiv");  ID로 선택
+        const elementByQuery = document.querySelector(".myClass");  클래스로 선택
+-->
