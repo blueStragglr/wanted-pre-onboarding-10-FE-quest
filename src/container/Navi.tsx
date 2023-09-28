@@ -1,16 +1,18 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/navi/Button';
 
-const Navi = () => {
-  const { pathname } = useLocation();
-  const navigate = useNavigate();
+type NaviProps = {
+  isMock: boolean;
+};
 
-  const onClick = () => navigate(pathname === '/mock' ? '/' : '/mock');
+const Navi = ({ isMock }: NaviProps) => {
+  const navigate = useNavigate();
+  const onClick = () => navigate(isMock ? '/' : '/mock');
 
   return (
     <Button
       onClick={onClick}
-      text={pathname === '/mock' ? '로그인 화면으로 가기' : 'Mock API 결과 보러 가기'}
+      text={isMock ? '로그인 화면으로 가기' : 'Mock API 결과 보러 가기'}
     />
   );
 };
