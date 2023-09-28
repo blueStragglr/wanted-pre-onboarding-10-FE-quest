@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { PageProvider } from '@/contexts/PageContext';
 import App from './App.tsx';
-import { Theme } from '@radix-ui/themes';
-import '@radix-ui/themes/styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Theme>
+    <PageProvider>
       <App />
-    </Theme>
+    </PageProvider>
   </React.StrictMode>
 );

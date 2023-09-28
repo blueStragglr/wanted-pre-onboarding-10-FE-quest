@@ -14,6 +14,7 @@ const PageDispatchContext = createContext<React.Dispatch<actions>>(() => {});
 const pageReducer = (state: Pages, action: actions) => {
   switch (action.type) {
     case 'SET_PAGE':
+      console.log(action);
       return (state = action.payload);
     default:
       return state;
