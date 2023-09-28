@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import Wrapper from '../components/common/Wrapper';
 import Spinner from '../components/mock/Spinner';
+import Text from '../components/mock/Text';
 
 const Mock = () => {
-  const [data, setData] = useState('');
+  const [data, setData] = useState<{ id: string; name: string }[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -14,26 +15,21 @@ const Mock = () => {
         { method: 'GET', headers: { 'Content-Type': 'application/json' } }
       ).then((value) => value.json());
 
-      setData(
-        response
-          .map((value: { name: string; id: string }) => `${value.id} ${value.name}`)
-          .join('\n')
-      );
-
+      setData(response);
       setIsLoading(false);
     };
 
     getData();
-  }, [data]);
+  }, []);
+
+  const dataComponents = data.map((value) => <Text key={value.id} text={value.name} />);
 
   return isLoading ? (
     <Wrapper>
       <Spinner />
     </Wrapper>
   ) : (
-    <Wrapper>
-      <pre>{data}</pre>
-    </Wrapper>
+    <Wrapper>{dataComponents}</Wrapper>
   );
 };
 
