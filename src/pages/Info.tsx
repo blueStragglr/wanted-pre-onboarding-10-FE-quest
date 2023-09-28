@@ -1,5 +1,5 @@
 const Info = () => {
-  return <h1>Info</h1>;
+  return <button>hello</button>;
 };
 
 export default Info;
