@@ -1,0 +1,25 @@
+:root {
+  --text-color: #000;
+  --border-color: #ccc;
+  --gray-color: #777;
+  --background-color: #fff;
+  --font-w400: 400;
+}
+
+#root {width:100%; padding:0; margin:0 auto; text-align:center;}
+
+.App {background:var(--background-color); color:var(--text-color)}
+.App > * {display:flex; flex-direction:column; place-items:center; place-content:center; padding:0 20px;}
+
+#Header {width:100%; height:70px; position:fixed; top:0; left:0; z-index:9; line-height:1; background:var(--background-color); display:flex; flex-flow:row nowrap; align-items:center; justify-content:stretch; padding:0 1rem;}
+#Header a.logo {margin-right:2rem;}
+#Header nav ul {display:flex; flex-direction:row; align-items:center; justify-content:flex-start;}
+#Header nav ul li {padding:0 1rem;}
+#Header nav ul li a {padding:0.125rem;}
+
+#Container {position:relative; min-height:calc(100vh - 30px); padding:100px 1rem 0; display:flex; flex-direction:column; place-content:center; place-content:center;}
+#Container section {width:100%; margin-bottom:5rem;}
+#Container section h2 {font-size:2.5rem; margin-bottom:2rem;}
+
+#Footer {height:30px; display:flex; align-items:center;}
+#Footer p {width:100%; text-align:center; font-size:0.75rem; color:var(--gray-color); font-weight:300;}
