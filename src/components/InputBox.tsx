@@ -2,10 +2,12 @@ import { styled } from 'styled-components';
 
 type InputBoxProps = {
   type: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const InputBox = ({ type }: InputBoxProps) => {
-  return <Input type={type} />;
+const InputBox = ({ type, value, onChange }: InputBoxProps) => {
+  return <Input type={type} value={value} onChange={onChange} />;
 };
 
 export default InputBox;
