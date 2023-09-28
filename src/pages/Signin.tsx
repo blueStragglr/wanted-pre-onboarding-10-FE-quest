@@ -1,5 +1,15 @@
+import { useState } from 'react';
+
 const Signin = () => {
-  return <div>로그인</div>;
+  const [form, setForm] = useState({
+    username: '',
+    password: ''
+  });
+
+  const onSubmit = () => {
+    console.log(form);
+  };
+  return <form onSubmit={onSubmit}></form>;
 };
 
 export default Signin;
