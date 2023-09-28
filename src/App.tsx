@@ -6,7 +6,6 @@ import Signin from '@/pages/Signin';
 
 const App = () => {
   const page = usePage();
-  console.log(page);
 
   return <Background>{page === 'main' ? <Main /> : <Signin />}</Background>;
 };
