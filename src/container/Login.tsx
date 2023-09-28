@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from '../components/Button';
 import InputBox from '../components/InputBox';
 import InputWrapper from '../components/InputWrapper';
 import Wrapper from '../components/Wrapper';
@@ -14,12 +15,17 @@ const Login = () => {
     setPw(e.target.value);
   };
 
+  const onClick = () => {
+    console.log(`아이디: ${id} / 비밀번호: ${pw}`);
+  };
+
   return (
     <Wrapper>
       <InputWrapper>
         <InputBox type="text" value={id} onChange={onChangeId} />
         <InputBox type="password" value={pw} onChange={onChangePw} />
       </InputWrapper>
+      <Button onClick={onClick} />
     </Wrapper>
   );
 };

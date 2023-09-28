@@ -14,4 +14,5 @@ export default Wrapper;
 const Conainer = styled.div`
   max-width: 960px;
   margin: 0 auto;
+  text-align: center;
 `;
