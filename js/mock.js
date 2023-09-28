@@ -1,5 +1,6 @@
 const API_URL = "https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock";
-const result_page = document.getElementById("api_result");
+const content = document.getElementsByClassName("content");
+const table = document.getElementById("api_table");
 
 fetch(API_URL)
   .then((response) => {
@@ -9,7 +10,15 @@ fetch(API_URL)
     return response.json();
   })
   .then((data) => {
-    result_page.textContent = JSON.stringify(data, null, 2);
+    const tbody = table.querySelector("tbody");
+    data.forEach((item) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${item.id}</td>
+        <td>${item.name}</td>
+      `;
+      tbody.appendChild(row);
+    });
   })
   .catch((error) => {
     console.error("API 요청 중 오류 발생:", error);
