@@ -9,19 +9,13 @@ type InputBoxProps = {
 
 const InputBox = ({ type, value, onChange, placeholder }: InputBoxProps) => {
   return (
-    <Input
-      type={type}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      isEmpty={!value}
-    />
+    <Input type={type} value={value} onChange={onChange} placeholder={placeholder} />
   );
 };
 
 export default InputBox;
 
-const Input = styled.input<{ isEmpty: boolean }>`
+const Input = styled.input<{ value: string }>`
   width: 100%;
   padding: 15px 20px;
   border: 0px;
@@ -35,6 +29,6 @@ const Input = styled.input<{ isEmpty: boolean }>`
   }
 
   &:nth-child(2) {
-    letter-spacing: ${({ isEmpty }) => (isEmpty ? '1px' : '5px')};
+    letter-spacing: ${({ value }) => (!value ? '1px' : '5px')};
   }
 `;
