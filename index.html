@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10월 원티드 프리온보딩 프론트엔드 사전과제</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>페이지 1 : 로그인 페이지 구현</h2>
+      <form class="login-form">
+        <div>
+          <label class="input-label" for="user-id">아이디</label>
+          <input class="input" id="user-id" name="user-id" type="text" placeholder="아이디를 입력하세요." />
+        </div>
+        <div>
+          <label class="input-label" for="user-pw">비밀번호</label>
+          <input class="input" id="user-pw" name="user-pw" type="password" placeholder="비밀번호를 입력하세요." />
+        </div>
+        <input class="btn" type="submit" value="로그인" />
+      </form>
+    </div>
+    <div class="api-container">
+      <h2>페이지 2: Mock API를 이용한 호출 결과 출력</h2>
+      <button id="call-api-btn" class="btn">호출하기</button>
+      <div class="card-flex-container"></div>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
