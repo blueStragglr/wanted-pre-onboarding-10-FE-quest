@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Button from '../components/Button';
-import InputBox from '../components/InputBox';
-import InputWrapper from '../components/InputWrapper';
-import Wrapper from '../components/Wrapper';
+import Button from '../components/login/Button';
+import InputBox from '../components/login/InputBox';
+import InputWrapper from '../components/login/InputWrapper';
+import Wrapper from '../components/login/Wrapper';
 
 const Login = () => {
   const [id, setId] = useState('');

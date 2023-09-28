@@ -16,4 +16,12 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  > input:first-child {
+    margin-bottom: 5px;
+  }
+
+  > input:last-child {
+    margin-bottom: 10px;
+  }
 `;
