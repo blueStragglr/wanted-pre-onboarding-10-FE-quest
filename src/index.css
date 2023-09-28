@@ -1,0 +1,26 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/*** RESET *** Don't Touch ***/
+* {margin:0; padding:0; box-sizing:border-box;}
+html {font-family:'pretendard'; font-size:16px; font-weight:400; line-height:1.4; color:#030303;}
+body {display:flex; place-items:center; min-width:320px; min-height:100vh;}
+ol, ul, li {list-style:none;}
+a {display:inline-block; text-decoration:none; color:inherit; outline:0;}
+img, video {max-width:100%; border:0;}
+input, textarea, select {border-radius:0; border:1px solid #cecece; font-family:inherit; font-size:inherit; line-height:inherit; padding:5px;}
+button {cursor:pointer; outline:0; border:0; border-radius:0.5rem; padding:0.5rem 1rem; font-family:inherit; font-size:inherit; font-weight:inherit; color:#030303; background:#ffffff;}
+h1, h2, h3, h4, h5, h6 {line-height:1;}
+
+code {display:block; padding:1rem 1.5rem; background:#202020; color:#ffffff; font-family:'Courier New', Courier, monospace; text-align:left; word-break:keep-all;}
+code h4 {font-size:1em;text-align:right;}
+code h4::before {content:'(';}
+code h4::after {content:')';}
+code dot::before {content:'...'; display:block; line-height:1; padding:1em 0; letter-spacing:-0.125em;}
+
+
+@media (max-width: 768px)  {
+  html {font-size:14px;}
+}
+@media (max-width: 450px)  {
+  html {font-size:12px;}
+}
