@@ -12,6 +12,7 @@ const Wrapper = ({ children }: WrapperProps) => {
 export default Wrapper;
 
 const Conainer = styled.div`
+  position: relative;
   max-width: 960px;
   margin: 0 auto;
   text-align: center;

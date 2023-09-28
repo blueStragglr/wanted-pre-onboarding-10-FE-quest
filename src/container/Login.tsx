@@ -22,10 +22,15 @@ const Login = () => {
   return (
     <Wrapper>
       <InputWrapper>
-        <InputBox type="text" value={id} onChange={onChangeId} />
-        <InputBox type="password" value={pw} onChange={onChangePw} />
+        <InputBox type="text" value={id} onChange={onChangeId} placeholder="아이디" />
+        <InputBox
+          type="password"
+          value={pw}
+          onChange={onChangePw}
+          placeholder="비밀번호"
+        />
+        <Button onClick={onClick} />
       </InputWrapper>
-      <Button onClick={onClick} />
     </Wrapper>
   );
 };
