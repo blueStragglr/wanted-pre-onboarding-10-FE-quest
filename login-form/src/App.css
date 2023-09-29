@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 400px;
+  max-width: 400px;
+  max-height: calc(100vh - 100px);
+  height: 635px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(225, 226, 227);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  padding-top: 56px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+}
+
+h2 {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 45px;
+}
+
+.form {
+  width: 100%;
+}
+
+.id,
+.password {
+  font-size: 14px;
+  color: rgb(136, 136, 136);
+  margin: 17px 0px 7px 0px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0px 12px;
+  outline: none;
+  border: 1px solid #e1e2e3;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  cursor: text;
+}
+
+input:focus {
+  border: 1px solid #36f;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: #36f;
+  border: none;
+  margin-top: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.link {
+  display: block;
+  color: rgb(118, 118, 118);
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 30px;
+  text-align: center;
+}
