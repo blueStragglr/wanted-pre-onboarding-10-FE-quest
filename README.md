@@ -1,32 +1,65 @@
-# 10월 원티드 프리온보딩 프론트엔드 사전과제
+# Qwik City App ⚡️
 
-수강생 여러분 안녕하세요 :)
+- [Qwik Docs](https://qwik.builder.io/)
+- [Discord](https://qwik.builder.io/chat)
+- [Qwik GitHub](https://github.com/BuilderIO/qwik)
+- [@QwikDev](https://twitter.com/QwikDev)
+- [Vite](https://vitejs.dev/)
 
-10월 프론트엔드 프리온보딩 과정 진행을 위해, 아래의 내용을 읽고 사전 과제를 수행해 주세요.
+---
 
-사전 과제는 해당 레포지토리를 포크하여 시작하시면 되며, Pull Request를 생성해 제출해 주세요.
+## Project Structure
 
-제출을 위해 PR을 머지하실 필요는 없습니다. 
+This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
 
-PR을 생성하신 후, 구글 설문지(https://forms.gle/Y4xBHGSgCMdfEA3M6  )를 통해 PR 링크를 제출해 주시면 제출이 완료됩니다.
+Inside your project, you'll see the following directory structure:
 
+```
+├── public/
+│   └── ...
+└── src/
+    ├── components/
+    │   └── ...
+    └── routes/
+        └── ...
+```
 
-## 만들어야 할 것
+- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
 
-이번 프리온보딩에서는 로그인과 API 호출 등에 대해 다룹니다.
+- `src/components`: Recommended directory for components.
 
-과정 진행 전 관련 지식의 워밍업을 위해, 아래의 요구사항을 충족하는 페이지를 만들어 주세요.
+- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
 
-### 페이지 1
-- 아이디, 비밀번호를 입력할 수 있는 폼이 있는 페이지
-- 클릭해서 아이디, 비밀번호를 콘솔에 출력할 수 있는 버튼
+## Add Integrations and deployment
 
-### 페이지 2
-- Mock API를 이용해 화면에 호출 결과를 출력하는 페이지
-  - 아무 API나 호출하여도 상관 없으며, 포매팅도 아무렇게나 해도 괜찮습니다. API 호출 구문을 작성해 보는 경험을 위한 과제입니다.
-  - 만약 호출할 API가 마땅치 않으면, `'GET', https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock` 를 호출하세요. 혹시 정상적으로 호출되지 않는다면 mockapi.io 에서 새 API를 생성해 주세요.
+Use the `npm run qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
 
-페이지의 스타일은 신경쓰지 않아도 괜찮습니다. 생각나는 적절한 로그인 페이지를 모방하여 만들어 주세요.
+```shell
+npm run qwik add # or `yarn qwik add`
+```
 
-곧 강의에서 뵙겠습니다 :)
+## Development
 
+Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
+
+```shell
+npm start # or `yarn start`
+```
+
+> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+
+## Preview
+
+The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+
+```shell
+npm run preview # or `yarn preview`
+```
+
+## Production
+
+The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+
+```shell
+npm run build # or `yarn build`
+```
