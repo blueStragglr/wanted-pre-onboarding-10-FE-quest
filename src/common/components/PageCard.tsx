@@ -3,6 +3,7 @@ import { CSSProperties } from 'react';
 import theme from '../../style/theme';
 import { Link } from 'react-router-dom';
 import { bcColorGradient } from '../cssStyle';
+import Txt from './Txt';
 
 interface PageCardProps {
   to: string;
@@ -22,8 +23,12 @@ const PageCard = ({
       <IconBox>
         <Icon>🛠️</Icon>
       </IconBox>
-      <Title>{pageName}</Title>
-      <Description>{description}</Description>
+      <Txt typography="h3" color="black">
+        {pageName}
+      </Txt>
+      <Txt typography="p" color="#5d5d5d">
+        {description}
+      </Txt>
     </BoxLink>
   );
 };
@@ -42,17 +47,6 @@ const BoxLink = styled(Link)<{ $bgColor: CSSProperties['color'] }>`
 
   border-radius: 8px;
   ${bcColorGradient}
-`;
-
-const Title = styled.h2`
-  color: black;
-  font-weight: bold;
-  font-size: 16px;
-`;
-
-const Description = styled.p`
-  color: #5d5d5d;
-  font-size: 14px;
 `;
 
 const IconBox = styled.div`
