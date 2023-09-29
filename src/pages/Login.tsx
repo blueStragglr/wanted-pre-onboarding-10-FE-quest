@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Container,
   InputLabel,
@@ -6,13 +7,13 @@ import {
   ButtonGroup,
   Button,
 } from '@mui/material';
-import styled from '@emotion/styled';
 
 const Login = () => {
   const [state, setState] = useState({
     id: '',
     password: '',
   });
+  const navigate = useNavigate();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -36,21 +37,20 @@ const Login = () => {
   return (
     <Container
       sx={{
+        border: '1px gray solid',
+        borderRadius: 3,
+        minHeight: '100vh',
         display: 'flex',
-        width: '100vw',
-        height: '100vh',
         justifyContent: 'center',
         alignItems: 'center',
+        position: 'relative',
       }}
+      maxWidth="xs"
     >
-      <Form
-        style={{
-          border: '1px solid gray',
-          borderRadius: '10px',
-          padding: '3rem',
-        }}
-        onSubmit={handleSubmit}
-      >
+      <ButtonGroup sx={{ position: 'absolute', right: 10, top: 10 }}>
+        <Button onClick={() => navigate('/info')}>Info 페이지 이동</Button>
+      </ButtonGroup>
+      <form onSubmit={handleSubmit}>
         <InputLabel htmlFor="id">아이디</InputLabel>
         <Input type="text" id="id" value={state.id} onChange={handleChange} />
         <InputLabel sx={{ mt: 3 }} htmlFor="password">
@@ -62,19 +62,13 @@ const Login = () => {
           value={state.password}
           onChange={handleChange}
         />
-        <ButtonGroup sx={{ display: 'block', mt: 3 }}>
+        <ButtonGroup sx={{ display: 'flex', mt: 3, justifyContent: 'center' }}>
           <Button type="submit">로그인</Button>
           <Button onClick={handleClick}>초기화</Button>
         </ButtonGroup>
-      </Form>
+      </form>
     </Container>
   );
 };
 
 export default Login;
-
-const Form = styled.form`
-  border: 1px solid gray;
-  border-radius: 10px;
-  padding: 3rem;
-`;

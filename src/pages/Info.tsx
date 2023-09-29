@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Container } from '@mui/material';
+import { Button, ButtonGroup, Container } from '@mui/material';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 type TInfo = {
   name: string;
@@ -10,6 +11,7 @@ type TInfo = {
 const Info = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [state, setState] = useState<TInfo[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getData = async () => {
@@ -36,6 +38,9 @@ const Info = () => {
       }}
       maxWidth="xs"
     >
+      <ButtonGroup sx={{ position: 'absolute', right: 10, top: 10 }}>
+        <Button onClick={() => navigate('/')}>Login 페이지 이동</Button>
+      </ButtonGroup>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
