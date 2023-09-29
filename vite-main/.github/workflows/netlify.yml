@@ -1,0 +1,17 @@
+name: client
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install 
+        working-directory: ./
+      - name: Build
+        run: npm run build
+        working-directory: ./
