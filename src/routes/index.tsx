@@ -4,8 +4,12 @@ import { Link, type DocumentHead } from "@builder.io/qwik-city";
 export default component$(() => {
   return (
     <>
-      <Link href="/login">로그인 페이지로</Link>
-      <Link href="/mock">api 호출 페이지로</Link>
+      <div style={{ width: "fit-content", margin: "0 auto" }}>
+        <Link href="/login">로그인 페이지로</Link>
+        <br />
+        <br />
+        <Link href="/mock">api 호출 페이지로</Link>
+      </div>
     </>
   );
 });
