@@ -33,6 +33,15 @@
     "sourceType": "module"
   },
   "rules": {
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "some": [
+          "nesting",
+          "id"
+        ]
+      }
+    ],
     "react/function-component-definition": [
       2,
       {
@@ -257,6 +266,9 @@
         "paths": [
           "src"
         ]
+      },
+      "typescript": {
+        "typescript": {}
       }
     }
   },
