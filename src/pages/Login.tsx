@@ -3,9 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import {
   Container,
   InputLabel,
-  Input,
   ButtonGroup,
   Button,
+  FormControl,
+  OutlinedInput,
+  Box,
 } from '@mui/material';
 
 const Login = () => {
@@ -30,10 +32,6 @@ const Login = () => {
     }));
   };
 
-  const handleClick = () => {
-    setState({ id: '', password: '' });
-  };
-
   return (
     <Container
       sx={{
@@ -50,23 +48,41 @@ const Login = () => {
       <ButtonGroup sx={{ position: 'absolute', right: 10, top: 10 }}>
         <Button onClick={() => navigate('/info')}>Info 페이지 이동</Button>
       </ButtonGroup>
-      <form onSubmit={handleSubmit}>
-        <InputLabel htmlFor="id">아이디</InputLabel>
-        <Input type="text" id="id" value={state.id} onChange={handleChange} />
-        <InputLabel sx={{ mt: 3 }} htmlFor="password">
-          비밀번호
-        </InputLabel>
-        <Input
-          type="password"
-          id="password"
-          value={state.password}
-          onChange={handleChange}
-        />
-        <ButtonGroup sx={{ display: 'flex', mt: 3, justifyContent: 'center' }}>
+      <Box
+        component="form"
+        onSubmit={handleSubmit}
+        sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}
+      >
+        <FormControl>
+          <InputLabel htmlFor="id">아이디</InputLabel>
+          <OutlinedInput
+            label="아이디"
+            required
+            autoFocus
+            type="text"
+            id="id"
+            value={state.id}
+            onChange={handleChange}
+          />
+        </FormControl>
+        <FormControl>
+          <InputLabel htmlFor="password">비밀번호</InputLabel>
+          <OutlinedInput
+            label="비밀번호"
+            required
+            type="password"
+            id="password"
+            value={state.password}
+            onChange={handleChange}
+          />
+        </FormControl>
+        <ButtonGroup sx={{ display: 'flex', justifyContent: 'center' }}>
           <Button type="submit">로그인</Button>
-          <Button onClick={handleClick}>초기화</Button>
+          <Button onClick={() => setState({ id: '', password: '' })}>
+            초기화
+          </Button>
         </ButtonGroup>
-      </form>
+      </Box>
     </Container>
   );
 };

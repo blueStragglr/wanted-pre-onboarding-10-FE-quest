@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Button, ButtonGroup, Container } from '@mui/material';
+import {
+  Button,
+  ButtonGroup,
+  Container,
+  List,
+  ListItem,
+  ListItemText,
+} from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -38,17 +45,21 @@ const Info = () => {
       }}
       maxWidth="xs"
     >
-      <ButtonGroup sx={{ position: 'absolute', right: 10, top: 10 }}>
+      <ButtonGroup
+        sx={{ position: 'absolute', right: 10, top: 10, zIndex: 99 }}
+      >
         <Button onClick={() => navigate('/')}>Login 페이지 이동</Button>
       </ButtonGroup>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
-        state.map(({ id, name }) => (
-          <p key={id}>
-            {id}. {name}
-          </p>
-        ))
+        <List>
+          {state.map(({ id, name }) => (
+            <ListItem key={id}>
+              <ListItemText primary={`${id}. ${name}`} />
+            </ListItem>
+          ))}
+        </List>
       )}
     </Container>
   );
