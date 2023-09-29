@@ -1,5 +1,5 @@
 {
-  "name": "wanted-pre-onboarding-10-fe-quest",
+  "name": "note",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -21,6 +21,7 @@
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "autoprefixer": "^10.4.16",
+    "daisyui": "^3.8.1",
     "eslint": "8.50.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "13.5.2",
