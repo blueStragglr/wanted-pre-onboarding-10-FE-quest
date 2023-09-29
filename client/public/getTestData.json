@@ -1,0 +1,13 @@
+{
+  "name": "getTestData",
+  "users": [
+    { "id": 11, "firstName": "Marcel", "age": 39 },
+    { "id": 12, "firstName": "Assunta", "age": 42 },
+    { "id": 13, "firstName": "Trace", "age": 26 },
+    { "id": 14, "firstName": "Enoch", "age": 21 },
+    { "id": 15, "firstName": "Jeanne", "age": 26 }
+  ],
+  "total": 100,
+  "skip": 10,
+  "limit": 5
+}
