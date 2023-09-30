@@ -4,9 +4,11 @@ import theme from '../../style/theme';
 import { Link } from 'react-router-dom';
 import { bcColorGradient } from '../cssStyle';
 import Txt from './Txt';
+import Spacing from './Spacing';
 
 interface PageCardProps {
   to: string;
+  icon: string;
   pageName: string;
   description: string;
   bgColor?: CSSProperties['backgroundColor'];
@@ -14,6 +16,7 @@ interface PageCardProps {
 
 const PageCard = ({
   to,
+  icon,
   pageName,
   description,
   bgColor = theme.colors.secondary,
@@ -21,11 +24,13 @@ const PageCard = ({
   return (
     <BoxLink to={to} $bgColor={bgColor}>
       <IconBox>
-        <Icon>🛠️</Icon>
+        <Icon>{icon}</Icon>
       </IconBox>
+      <Spacing direction="vertical" size={8} />
       <Txt typography="h3" color="black">
         {pageName}
       </Txt>
+      <Spacing direction="vertical" size={4} />
       <Txt typography="p" color="#5d5d5d">
         {description}
       </Txt>
@@ -38,12 +43,12 @@ export default PageCard;
 const BoxLink = styled(Link)<{ $bgColor: CSSProperties['color'] }>`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  row-gap: 4px;
-  padding: 24px;
-  height: 150px;
+  justify-content: start;
 
-  width: 300px;
+  padding: 24px;
+  height: 200px;
+
+  width: 360px;
 
   border-radius: 8px;
   ${bcColorGradient}
