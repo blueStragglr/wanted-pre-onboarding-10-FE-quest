@@ -17,7 +17,7 @@ export const routes = createBrowserRouter(
       ],
     },
   ],
-  { basename: '/wanted-pre-onboarding-10-FE-quest' },
+  { basename: '/' },
 );
 
 export default routes;
