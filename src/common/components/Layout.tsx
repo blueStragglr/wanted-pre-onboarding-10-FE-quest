@@ -27,6 +27,7 @@ const Container = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 80px;
   height: 100vh;
   min-width: 850px;
 `;
