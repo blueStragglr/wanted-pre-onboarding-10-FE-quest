@@ -51,10 +51,11 @@ export const ResTextarea = styled.textarea`
 
 export const Button = styled.button`
     padding: 10px;
-    width: 300px;
+    width: 150px;
     height: 50px;
     position: relative;
     top: 60px;
+    left: -10px;
     color: #01161E;
     font-size: 20px;
     font-weight: bold;
@@ -69,5 +70,19 @@ export const Button = styled.button`
     &:active{
         background-color: #59679E;
         color: #eeeeee;
+    }
+
+    &.console{
+        background-color: #D9CAC1;
+        left: 20px;
+        
+        &:hover {
+            background-color: #124559;
+        }
+
+        &:active{
+            background-color: #59679E;
+            color: #eeeeee;
+        }
     }
 `;

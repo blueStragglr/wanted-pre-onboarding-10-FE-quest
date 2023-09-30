@@ -37,7 +37,7 @@ const ShowAPI = () => {
                 <APIForm>
                     <APIFormTitle>Mock API</APIFormTitle>
                     {loading ? (
-                    <Loading>로딩중</Loading>
+                    <ResTextarea readOnly/>
                     ) : error ? (
                         <Loading className="error">Error: {error}</Loading>
                     ) : (
@@ -47,7 +47,7 @@ const ShowAPI = () => {
                         />
                     )}
                     <Button onClick={handleButton}>데이터 출력</Button>
-                    <Button onClick={DataToConsole}>콘솔 출력</Button>
+                    <Button onClick={DataToConsole} className="console">콘솔 출력</Button>
                 </APIForm>
             </Container>
         </>
