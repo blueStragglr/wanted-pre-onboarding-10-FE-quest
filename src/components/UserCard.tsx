@@ -38,6 +38,8 @@ const Card = styled.div`
     box-shadow 0.2s;
   cursor: pointer;
 
+  margin: auto;
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);

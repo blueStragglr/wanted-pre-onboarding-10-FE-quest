@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { CSSProperties } from 'react';
-import theme from '../../style/theme';
 import { Link } from 'react-router-dom';
-import { bcColorGradient } from '../cssStyle';
+import { bcColorGradient } from '../../style/cssStyle';
 import Txt from './Txt';
 import Spacing from './Spacing';
+import colors from '../../style/colors';
 
 interface PageCardProps {
   to: string;
@@ -19,7 +19,7 @@ const PageCard = ({
   icon,
   pageName,
   description,
-  bgColor = theme.colors.secondary,
+  bgColor = colors.purple200,
 }: PageCardProps) => {
   return (
     <BoxLink to={to} $bgColor={bgColor}>
