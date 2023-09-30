@@ -5,12 +5,15 @@ import { ThemeProvider } from 'styled-components';
 import theme from './style/theme';
 import { RouterProvider } from 'react-router-dom';
 import routes from './router/routes';
+import { ModalProvider } from './common/components/Modal';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-      <RouterProvider router={routes} />
+      <ModalProvider>
+        <RouterProvider router={routes} />
+      </ModalProvider>
     </ThemeProvider>
   </React.StrictMode>,
 );
