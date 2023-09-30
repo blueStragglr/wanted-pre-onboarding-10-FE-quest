@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Home from '../pages/Home';
 import Layout from '../common/components/Layout';
 import Login from '../pages/Login';
-import Requset from '../pages/Requset';
+import UserList from '../pages/UserList';
 
 export const routes = createBrowserRouter(
   [
@@ -13,7 +13,7 @@ export const routes = createBrowserRouter(
       children: [
         { index: true, element: <Home /> },
         { path: '/login', element: <Login /> },
-        { path: '/request', element: <Requset /> },
+        { path: '/user-list', element: <UserList /> },
       ],
     },
   ],

@@ -14,9 +14,9 @@ const Home = () => {
       />
       <Spacing direction={'horizontal'} size={48} />
       <PageCard
-        pageName="Request Page"
+        pageName="UserList Page"
         icon="🌐"
-        to="/request"
+        to="/user-list"
         description="사전과제 요청 테스트 페이지입니다."
         bgColor={colors.purple200}
       />
