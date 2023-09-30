@@ -20,13 +20,14 @@ PR을 생성하신 후, 구글 설문지(https://forms.gle/Y4xBHGSgCMdfEA3M6  )�
 ### 페이지 1
 - 아이디, 비밀번호를 입력할 수 있는 폼이 있는 페이지
 - 클릭해서 아이디, 비밀번호를 콘솔에 출력할 수 있는 버튼
+<img width="1549" alt="스크린샷 2023-10-01 오전 3 11 31" src="https://github.com/dmswn1004/wanted-pre-onboarding-10-FE-quest/assets/101851472/bb0edfa0-2189-4fea-8e48-b64e389872aa">
+
 
 ### 페이지 2
 - Mock API를 이용해 화면에 호출 결과를 출력하는 페이지
   - 아무 API나 호출하여도 상관 없으며, 포매팅도 아무렇게나 해도 괜찮습니다. API 호출 구문을 작성해 보는 경험을 위한 과제입니다.
   - 만약 호출할 API가 마땅치 않으면, `'GET', https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock` 를 호출하세요. 혹시 정상적으로 호출되지 않는다면 mockapi.io 에서 새 API를 생성해 주세요.
+<img width="1549" alt="스크린샷 2023-10-01 오전 3 11 56" src="https://github.com/dmswn1004/wanted-pre-onboarding-10-FE-quest/assets/101851472/6ba22df5-f8bb-4969-bee5-01a8947bd1ed">
 
 페이지의 스타일은 신경쓰지 않아도 괜찮습니다. 생각나는 적절한 로그인 페이지를 모방하여 만들어 주세요.
-
-곧 강의에서 뵙겠습니다 :)
 
