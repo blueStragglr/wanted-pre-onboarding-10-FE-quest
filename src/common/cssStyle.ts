@@ -6,7 +6,7 @@ export const bcColorGradient = css<{
 }>`
   background: ${({ $bgColor }) =>
     `linear-gradient(90deg, ${$bgColor} 0%, #FFFFFF 140%)`};
-  transition: background 1s ease-in-out;
+  transition: background 0.6s ease-in-out;
 
   &:hover {
     background: ${({ $bgColor }) => $bgColor};
