@@ -9,7 +9,6 @@ const Header = () => {
            <li>${el}</li>
            </Link>
            )}
-           
             </ul> 
         </header>
     );
