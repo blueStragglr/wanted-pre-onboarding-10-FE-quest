@@ -30,6 +30,16 @@ const StyledButton = styled.button<ButtonProps>`
 
   ${(props) => TYPE_VARIANTS[props.variant || 'primary']}
   ${(props) => SIZE_VARIANTS[props.size || 'medium']}
+  ${(props) =>
+    props.disabled &&
+    css`
+      background-color: ${colors.grey800};
+      color: ${colors.grey100};
+      cursor: not-allowed;
+      &:hover {
+        background-color: ${colors.grey900};
+      }
+    `}
 `;
 
 const TYPE_VARIANTS = {
