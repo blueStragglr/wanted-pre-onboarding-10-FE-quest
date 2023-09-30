@@ -105,18 +105,18 @@ const Modal = ({
         {title && (
           <>
             <Txt typography="h3">{title}</Txt>
-            <Spacing direction={'horizontal'} size={10}></Spacing>
+            <Spacing direction={'vertical'} size={16} />
           </>
         )}
         {message && (
           <>
             <Txt color={colors.black50}>{message}</Txt>
-            <Spacing direction={'horizontal'} size={10}></Spacing>
+            <Spacing direction={'vertical'} size={24}></Spacing>
           </>
         )}
         {variant === '1-button' ? (
           <OneButtonWrapper>
-            <Button onClick={closeModal} style={{ minWidth: '100px' }}>
+            <Button onClick={handleConfirm} style={{ minWidth: '100px' }}>
               {buttonSpan[0] ? buttonSpan[0] : '확인'}
             </Button>
           </OneButtonWrapper>
