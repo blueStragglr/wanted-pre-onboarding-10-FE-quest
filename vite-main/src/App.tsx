@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import {Routes,Route}from "react-router-dom"
 import Header from './component/Header';
-import Page1 from './Page1';
-import Page2 from './Page2';
+import Page1 from './page/Page1';
+import Page2 from './page/Page2';
 function App() {
   return (
     <div className="App">

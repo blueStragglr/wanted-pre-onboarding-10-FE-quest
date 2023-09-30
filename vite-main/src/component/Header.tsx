@@ -1,15 +1,16 @@
 import React from 'react';
 import {Link} from "react-router-dom"
+import styled from "styled-components";
 const Header = () => {
     return (
         <header>
-           <ul>
+           <Ul >
            {navData.map((el,idx)=>
            <Link to ={`${routePath[el]}`} key={`${el}${idx}`}>
-           <li>${el}</li>
+           <li>{el}</li>
            </Link>
            )}
-            </ul> 
+            </Ul> 
         </header>
     );
 };
@@ -23,4 +24,13 @@ const routePath :PathType= {
     "페이지1" : "/",
     "페이지2" : "/page/1"
 }
+
 export default Header;
+const Ul = styled.ul`
+display: flex;
+color: black;
+.li {
+    font-size:5rem;
+}
+
+`;
