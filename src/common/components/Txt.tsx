@@ -7,7 +7,6 @@ interface TxtProps extends HTMLAttributes<HTMLElement> {
 }
 
 const Txt = ({ typography = 'p', ...props }: TxtProps) => {
-  console.log(typography, 'typography');
   return <StyledTxt as={typography} typography={typography} {...props} />;
 };
 
@@ -33,6 +32,7 @@ const TYPOGRAPH_VARIANT = {
 const StyledTxt = styled.span<TxtProps>`
   color: ${(props) => props.color};
   ${(props) => TYPOGRAPH_VARIANT[props.typography || 'p']}
+  white-space: pre-line;
 `;
 
 export default Txt;
