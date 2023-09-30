@@ -1,15 +1,19 @@
 import { createBrowserRouter } from 'react-router-dom';
-import App from '../App';
+
+import Home from '../pages/Home';
+import Layout from '../common/components/Layout';
+import Login from '../pages/Login';
+import Requset from '../pages/Requset';
 
 export const routes = createBrowserRouter(
   [
     {
       path: '/',
-      element: <App />,
+      element: <Layout />,
       children: [
-        { index: true, element: <div>home</div> },
-        { path: '/login', element: <div>login</div> },
-        { path: '/api-check', element: <div>api-chec</div> },
+        { index: true, element: <Home /> },
+        { path: '/login', element: <Login /> },
+        { path: '/request', element: <Requset /> },
       ],
     },
   ],
