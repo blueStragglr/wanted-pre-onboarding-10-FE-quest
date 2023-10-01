@@ -5,18 +5,18 @@ interface InputProps {
   label: "아이디" | "비밀번호";
   name: "id"| "password";
   error?:boolean;
+  setInputValue: React.Dispatch<React.SetStateAction<string>>;
+  inputValue:string
 }
 const inputData ={
     "아이디" : {type: "text", placeholder : "아이디를 입력하세요." ,},
     "비밀번호" : {type: "password", placeholder : "비밀번호를 입력하세요."},
 }
 
-const Input: React.FC<InputProps> = ({ label,name,error }) => {
-    const [inputValue, setInputValue] = useState('');
+const Input: React.FC<InputProps> = ({ label,name,error,setInputValue,inputValue }) => {
+    
     const type = inputData[label].type;
     const placeholder = inputData[label].placeholder;
-  
-    
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
