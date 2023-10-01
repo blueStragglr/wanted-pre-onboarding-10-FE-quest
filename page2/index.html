@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023.10 FE 챌린지-2. MOCK API(영화)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="container">
+        <div class="header">
+            <h1>오늘의 운동: 날씨(서울), 운동 API</h1>
+        </div>
+        <div class="search-area">
+            <input id="search-input" type="text" placeholder="search"/>
+            <i id="search-weathers" class="fa-solid fa-music"></i>
+            <i id="search-workout" class="fa-solid fa-dumbbell"></i>
+        </div>
+        <div class="menus">
+            <button>back</button>
+            <button>cardio</button>
+            <button>chest</button>
+            <button>lower arms</button>
+            <button>lower legs</button>
+            <button>neck</button>
+            <button>shoulders</button>
+            <button>upper arms</button>
+            <button>upper legs</button>
+            <button>waist</button>
+        </div>
+        <section id="weather-board" class="weather-board">
+            <div class="row weathers">
+                <div class="col weather">
+                    <p>날짜: ${weather.dt_txt}</p>
+                    <p>날씨: ${weather.weather[0].description}</p>
+                    <p>기온: ${weather.main.temp}</p>
+                    <p>습도: ${weather.main.humidity}</p>
+                </div>
+            </div>
+        </section>
+        <section id="workout-board" class="workout-board">
+            <div class="row workouts">
+                <div class="col workout">
+                    <img src="" />
+                    <p>이름: ${workout.name}</p>
+                    <p>운동기구: ${workout.equipment}</p>
+                    <p>주요부위: ${workout.bodyPart}-${workout.target}</p>
+                    <p>운동방법: ${workout.instructions}</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
