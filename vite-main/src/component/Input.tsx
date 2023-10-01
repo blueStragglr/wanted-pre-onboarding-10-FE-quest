@@ -1,32 +1,54 @@
-import React, { useState } from 'react';
-import styled from "styled-components";
-const Input = ({label,name}:InputProps) => {
-    const [data,setData] =useState("");
-    const [isValid,setisValid]=useState(true);
+import React, { useState, ChangeEvent } from 'react';
+import styled from 'styled-components';
 
-    const type = name!=="password"?"text":"password";
-    const placeholder = label ==="id"?"아이디를 입력하세요":"비밀번호를 입력하세요";
-
-    function handleInput(){
-        setData("");
-    }
-
-    return (
-        <label>
-            {label}
-            <input 
-            type={type} 
-            value={data} 
-            name ={name}
-            placeholder = {placeholder}
-            onChange={handleInput}
-            />
-            {isValid ||<span>잘못입력하셨습니다.</span>}
-        </label>
-    );
-};
 interface InputProps {
-    label: string
-    name: string
+  label: "아이디" | "비밀번호";
+  name: "id"| "password";
+  error?:boolean;
 }
+const inputData ={
+    "아이디" : {type: "text", placeholder : "아이디를 입력하세요." ,},
+    "비밀번호" : {type: "password", placeholder : "비밀번호를 입력하세요."},
+}
+
+const Input: React.FC<InputProps> = ({ label,name,error }) => {
+    const [inputValue, setInputValue] = useState('');
+    const type = inputData[label].type;
+    const placeholder = inputData[label].placeholder;
+  
+    
+
+    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
+  };
+
+  return (
+    <InputContainer>
+      {label && <label>{label}</label>}
+      <InputEl
+        type={type}
+        name= {name}
+        value={inputValue}
+        onChange={handleInputChange}
+        placeholder={placeholder}
+      />
+      {error && <ErrorMessage >{error}</ErrorMessage>}
+    </InputContainer>
+  );
+};
+
+const InputContainer = styled.div`
+margin-bottom: 1rem;
+`;
+
+const InputEl = styled.input`
+ padding: '0.5rem';
+ font-size: '1rem' ;
+`;
+
+const ErrorMessage =styled.span`
+color: 'red';
+ font-size: '0.8rem';
+`;
+
 export default Input;
