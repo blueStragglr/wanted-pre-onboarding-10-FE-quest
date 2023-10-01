@@ -1,14 +1,15 @@
 "use client";
-
 import React from "react";
-import styled from "styled-components";
 import Login from "@/components/Login";
-
+import Modal from "@/components/modal/Modal";
+import styled from "styled-components";
 const page = () => {
   return (
-    <Main>
-      <Login />
-    </Main>
+    <Modal>
+      <Main>
+        <Login />
+      </Main>
+    </Modal>
   );
 };
 
@@ -20,6 +21,7 @@ const Main = styled.main`
   align-items: center;
   margin-top: 50px;
   padding: 1rem;
-  height: 100vh;
   width: 100%;
+  background-color: white;
+  border-radius: 10px;
 `;

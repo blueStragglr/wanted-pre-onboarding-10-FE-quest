@@ -7,8 +7,10 @@ import NavBar from "@/components/NavBar";
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -19,6 +21,7 @@ export default function RootLayout({
             <NavBar />
             <Container>{children}</Container>
           </Wrapper>
+          {modal}
         </body>
       </ThemeProvider>
     </html>
