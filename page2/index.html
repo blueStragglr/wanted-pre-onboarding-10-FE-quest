@@ -14,11 +14,40 @@
             <h1>오늘의 운동: 날씨(서울), 운동 API</h1>
         </div>
         <div class="search-area">
-            <input id="search-input" type="text" placeholder="search"/>
-            <i id="search-weathers" class="fa-solid fa-music"></i>
-            <i id="search-workout" class="fa-solid fa-dumbbell"></i>
+            <select id="equipments" onchange="changeSelection()" class="w-25 form-select form-select-sm" aria-label="Small select example">
+                <option value=""selected disabled>Equipments</option>
+                <option value="1">assisted</option>
+                <option value="2">band</option>
+                <option value="3">barbell</option>
+                <option value="4">body weight</option>
+                <option value="5">bosu ball</option>
+                <option value="6">cable</option>
+                <option value="7">dumbbell</option>
+                <option value="8">elliptical machine</option>
+                <option value="9">ez barbell</option>
+                <option value="10">kettlebell</option>
+                <option value="11">leverage machine</option>
+                <option value="12">medicine ball</option>
+                <option value="13">olympic barbell</option>
+                <option value="14">resistance band</option>
+                <option value="15">roller</option>
+                <option value="16">rope</option>
+                <option value="17">skierg machine</option>
+                <option value="18">sled machine</option>
+                <option value="19">smith machine</option>
+                <option value="20">stability ball</option>
+                <option value="21">smith machine</option>
+                <option value="22">stationary bike</option>
+                <option value="23">stepmill machine</option>
+                <option value="24">tire</option>
+                <option value="25">trap bar</option>
+                <option value="26">upper body ergometer</option>
+                <option value="27">weighted</option>
+                <option value="28">wheel roller</option>
+            </select>
+            <image id="search-weathers" src="./weather.png" style="width:40px; height: 40px;">
         </div>
-        <div class="menus">
+        <div class="bodyParts">
             <button>back</button>
             <button>cardio</button>
             <button>chest</button>
@@ -30,12 +59,12 @@
             <button>upper legs</button>
             <button>waist</button>
         </div>
-        <section id="weather-board" class="weather-board">
+        <section id="weather-board" class="weather-board" style="display:none">
             <div class="row weathers">
                 <div class="col weather">
                     <p>날짜: ${weather.dt_txt}</p>
-                    <p>날씨: ${weather.weather[0].description}</p>
-                    <p>기온: ${weather.main.temp}</p>
+                    <p>날씨: ${weather.weather.icon}${weather.weather.description}</p>
+                    <p>기온: ${(weather.main.temp-32)*5/9}</p>
                     <p>습도: ${weather.main.humidity}</p>
                 </div>
             </div>
@@ -43,7 +72,7 @@
         <section id="workout-board" class="workout-board">
             <div class="row workouts">
                 <div class="col workout">
-                    <img src="" />
+                    <img src="" style="object-fit:cover"/>
                     <p>이름: ${workout.name}</p>
                     <p>운동기구: ${workout.equipment}</p>
                     <p>주요부위: ${workout.bodyPart}-${workout.target}</p>

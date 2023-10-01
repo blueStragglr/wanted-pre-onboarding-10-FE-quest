@@ -1,20 +1,29 @@
 let url;
 let weathers=[]
 let workouts=[]
-const APIkey = "eb19bc9e29mshb1022632fb91b6cp1f62ecjsn568c007ce990"
+let select;
+
+const APIkey = "7a31d53abcmsh520039561102b12p1ef97fjsn69c41d475529"
 const searchWeather = document.getElementById("search-weathers")?.addEventListener("click", (e)=>getWeathers(e))
 const weatherBoard = document.getElementById("weather-board");
 
-const searchWorkout = document.getElementById("search-workout")?.addEventListener("click", (e)=>getWorkouts(e))
-const menus = document.querySelectorAll(".menus button")
-menus.forEach((menu) => menu.addEventListener("click", (e)=>getWorkoutsByMenu(e)))
+const bodyParts = document.querySelectorAll(".bodyParts button")
+bodyParts.forEach((part) => part.addEventListener("click", (e)=>getWorkoutsByParts(e)))
 
+function changeSelection(){
+	select = document.getElementById("equipments")
+    let selectedEquip = select.options[select.selectedIndex].text;
+    console.log(selectedEquip)
+    url = new URL(`https://exercisedb.p.rapidapi.com/exercises/equipment/${selectedEquip}?limit=10`)
+    workout()
+}
 
 const getWeathers = async (e)=> {
     url = new URL(`https://apjoy-weather-forecast.p.rapidapi.com/forecast?location=Seoul&days=4`)
     let header = new Headers({"X-RapidAPI-Key": APIkey})
     let response = await fetch(url, {headers:header})
     let data = await response.json()
+    console.log(data)
     weathers = data.list
     console.log(weathers)
     renderWeather()
@@ -30,10 +39,11 @@ const workout = async ()=>{
 
 
 const getWorkouts = async (e)=> {
-    url = new URL(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/back?limit=9`)
+    url = new URL(`https://exercisedb.p.rapidapi.com/exercises`)
     workout()
 }
 
+getWorkouts()
 
 const renderWeather = () => {
     if (weatherBoard.style.display == "none"){
@@ -74,8 +84,8 @@ const renderWorkout = () => {
     document.getElementById("workout-board").innerHTML = workoutHTML;
 }
 
-const getWorkoutsByMenu = async (e)=>{
-    let menu = e.target.textContent
-    url = new URL(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${menu}?limit=9`)
+const getWorkoutsByParts = async (e)=>{
+    let part = e.target.textContent
+    url = new URL(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${part}?limit=10`)
     workout()
 }

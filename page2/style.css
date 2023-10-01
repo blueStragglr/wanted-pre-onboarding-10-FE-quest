@@ -1,20 +1,29 @@
+body{
+    background-color: bisque;
+}
 .header{
     justify-content: center;
-    margin: 1em;
+    margin: 2em;
+    text-align: center;
 }
 .container{
     justify-content: center;
+    background-color: white;
 }
 .search-area{
     display: flex;
     justify-content: center;
 }
 
-.search-area i {
+.search-area input{
+    width: 120%;
+}
+.search-area image {
+
     margin: 1em
 }
 
-.menus{
+.bodyParts{
     margin-top: 1em;
     display: flex;
     justify-content: center;
@@ -23,14 +32,14 @@
     border-bottom: 4px double gray;
 }
 
-.menus button{
+.bodyParts button{
     margin: 0.1em;
     border:none;
     width:120px;
     font-size: 20px;
 }
 
-.menus button:hover{
+.bodyParts button:hover{
     background-color: beige;
 }
 
@@ -53,9 +62,14 @@
 
 .workouts{
     margin: 0.5em;
-    max-width: 30%;
+    max-width: 40%;
 }
+
 
 .col{
     text-align: center;
+}
+
+.col img{
+    max-width: 100%;
 }
