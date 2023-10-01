@@ -8,6 +8,8 @@ export default defineConfig({
 
   resolve: {
     alias: {
+      "@Constants": path.resolve(__dirname, "src/constants"),
+      "@Hooks": path.resolve(__dirname, "src/hooks"),
       "@Pages": path.resolve(__dirname, "src/pages"),
     },
   },
