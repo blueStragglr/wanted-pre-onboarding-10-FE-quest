@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = async function () {
+	        const res = await fetch("https://64f732e69d775408495348ae.mockapi.io/api/v1/authmock", {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                method: "GET",
+            });
+
+            // 응답 코드가 4XX 계열일 때 (400, 403 등)
+            if (!res.ok) {
+                const errorContent = await res.json();
+                const { errorMessage } = errorContent;
+                alert(errorMessage);
+                throw new Error(errorMessage);
+            }
+
+            const result = await res.json();
+            document.getElementById('data').innerText = JSON.stringify(result);
+        }
+    </script>
+</head>
+<body>
+    <div id="data"></div>
+</body>
+</html>
