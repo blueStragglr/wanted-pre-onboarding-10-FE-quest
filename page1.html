@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function readData() {
+            const id = document.getElementById('id').value;
+            const pw = document.getElementById('pw').value;
+            console.log(`id = ${id}, pw = ${pw}`);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="id" value="" placeholder="id를 입력하세요."/>
+        <input type="password" id="pw" value="" placeholder="pw를 입력하세요."/>
+        <button id="loginBtn" onClick="readData();">버튼</button>
+    </div>
+</body>
+</html>
