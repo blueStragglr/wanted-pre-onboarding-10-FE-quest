@@ -22,7 +22,7 @@ interface PathType {
 }
 const routePath :PathType= {
     "페이지1" : "/",
-    "페이지2" : "/page/1"
+    "페이지2" : "/page/2"
 }
 
 export default Header;
