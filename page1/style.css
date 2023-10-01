@@ -1,0 +1,15 @@
+body{
+    background-color: bisque;
+    font-size: 36px;
+    text-align: center;
+    justify-content: center;
+}
+
+.container{
+    margin-top: 1em;
+    width:80%;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+}
