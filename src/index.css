@@ -1,0 +1,35 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+button {
+  all: unset;
+  margin: 0 4px; 
+  padding: 12px 16px;
+  color: #fff;
+  background-color: rgb(40, 66, 91);
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+/* layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
