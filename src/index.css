@@ -1,8 +1,24 @@
 /* reset */
+:root {
+  --border-radius: 12px;
+  --border-color: #ccc;
+
+  --color-white: #fff;
+  --color-black: #222;
+  --color-gray: #888;
+
+  --color-main-blue: #2E4159;
+  --color-main-yellow: #FEC887;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #F6F2EB;
 }
 
 ul li {
@@ -14,22 +30,46 @@ a {
   color: #222;
 }
 
-button {
-  all: unset;
-  margin: 0 4px; 
+span {
+  display: inline-block;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.5rem;
   padding: 12px 16px;
-  color: #fff;
-  background-color: rgb(40, 66, 91);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+button {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 12px 16px;
+  color: var(--color-white);
+  background-color: var(--color-main-blue);
   border: none;
-  border-radius: 24px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-weight: 700;
   cursor: pointer;
 }
 
 /* layout */
 .container {
+  /* height: 100vh; */
+}
+
+main {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 

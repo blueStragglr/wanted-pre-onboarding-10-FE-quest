@@ -1,0 +1,12 @@
+.menuContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  border: 1px solid blue;
+}
+
+.menubox {
+  width: 200px;
+  height: 100px;
+  border: 1px solid red;
+}
