@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wanted pre mission</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    .box {
+      width: fit-content;
+    }
+
+    #loginForm {
+      display: grid;
+      grid: auto / 10ch 1fr;
+      background-color: #d4eede;
+      padding: 2.5rem 5rem;
+      margin-bottom: 3em;
+    }
+
+    h1,
+    p {
+      margin: 0 0 2rem 0;
+    }
+
+    label,
+    input,
+    button {
+      padding: 7px 10px;
+      margin: 5px 0;
+    }
+
+    button {
+      grid-column: 1 / span 2;
+      width: 80%;
+      margin: 1.3rem auto 0;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>page 1</h1>
+    <p>
+      * 아이디, 비밀번호를 입력할 수 있는 폼이 있는 페이지</br>
+      * 클릭해서 아이디, 비밀번호를 콘솔에 출력할 수 있는 버튼
+    </p>
+    <form id="loginForm" action="POST">
+      <label for="id">아이디</label>
+      <input type="text" id="id" placeholder="id">
+      <label for="pw">비밀번호</label>
+      <input type="text" id="pw" placeholder="pw">
+      <button>submit</button>
+    </form>
+    <a href="./page2.html">page2 -></a>
+  </div>
+
+  <script>
+    const $loginForm = document.querySelector("#loginForm");
+    const $idInput = document.querySelector("#id");
+    const $pwInput = document.querySelector("#pw");
+
+    $loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const id = $idInput.value
+      const pw = $pwInput.value
+
+      $idInput.value = ''
+      $pwInput.value = ''
+
+      console.log('id: ', id)
+      console.log('pw: ', pw)
+    });
+  </script>
+</body>
+</html>
