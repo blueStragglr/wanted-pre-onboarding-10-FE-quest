@@ -1,32 +1,33 @@
 import { React, useState } from "react";
 
 export default function LoginPage() {
-  const [enteredId, setEnteredId] = useState("");
-  const [enteredPw, setEnteredPw] = useState("");
+    const [userInfo, setUserInfo] = useState({
+      id: "",
+      pw: "",
+    });
 
   const idChangeHandler = (event) => {
-    setEnteredId(event.target.value);
+    setUserInfo((prevState)=>{return {...userInfo, id:event.target.value}});
   };
 
   const pwChangeHandler = (event) => {
-    setEnteredPw(event.target.value);
+    setUserInfo((prevState)=>{return {...userInfo, pw:event.target.value}});
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(enteredId);
-    console.log(enteredPw);
+    console.log(userInfo);
   };
 
   return (
     <form onSubmit={submitHandler}>
       <div>
         <label>ID</label>
-        <input type="text" value={enteredId} onChange={idChangeHandler} />
+        <input type="text" value={userInfo.id} onChange={idChangeHandler} />
       </div>
       <div>
         <label>PW</label>
-        <input type="text" value={enteredPw} onChange={pwChangeHandler} />
+        <input type="text" value={userInfo.pw} onChange={pwChangeHandler} />
       </div>
       <div>
         <button type="submit">Button</button>
