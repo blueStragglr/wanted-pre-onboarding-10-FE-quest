@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import classes from "./Menu.module.css";
 
@@ -36,19 +37,25 @@ export default function Menu() {
     setIsLoading(false);
   }
 
+  // 이미지 따로, 글 따로.
   return (
-    <div>
-      <div>Menu </div>
-      <div>{isLoading ? "loading..." : "test"}</div>
-      <ul className={classes.menuContainer}>
-        {menu.map((el) => 
-          <li key={el.id} className={classes.menubox}>
-            <div>
-              <div>{}</div>
-            </div>
-          </li>
-        )}
-      </ul>
+    <div className={classes.menuWrapper}>
+      <h2>Menu</h2>
+      <div className={classes.menuContainer}>
+        {isLoading ? (<span>Loading...</span>) 
+          : (
+            <ul>
+              {menu.map((el) => 
+                <li key={el.id}>
+                  <span>{el.name}</span>
+                </li>
+              )}
+            </ul>
+          )}
+      </div>
+      <div className={classes.bottomArea}>
+        <Link to={"/"}>Home으로 돌아가기 &rarr;</Link>
+      </div>
     </div>
   )
 }

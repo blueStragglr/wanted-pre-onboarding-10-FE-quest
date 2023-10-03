@@ -1,12 +1,40 @@
-.menuContainer {
+.menuWrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 2rem;
+  width: 100%;
 
-  border: 1px solid blue;
+  & h2 {
+    margin-bottom: 2rem;
+  }
 }
 
-.menubox {
-  width: 200px;
-  height: 100px;
-  border: 1px solid red;
+.menuContainer {
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 800px;
+    /* padding: 1rem; */
+
+    & li {
+      padding: 12px 16px;
+      color: var(--color-black);
+      background-color: #CFD181;
+      border-radius: 1rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.bottomArea {
+  margin-top: 1rem;
+  
+  & > a {
+    width: 100%;
+    color: var(--color-gray);
+    text-align: center;
+    font-size: 0.75rem; 
+  }
 }
