@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import bcrypt from "bcryptjs";
 import Input from "@/components/common/Input";
 import Button from "@/components/common/Button";
-import { useState } from "react";
 
 interface ILoginInfo {
   id: string;
@@ -20,8 +21,17 @@ export default function LoginForm() {
     password: "",
   });
 
+  function hashPassword(plainPassword: string) {
+    const SALT_ROUND = 10;
+    const salt = bcrypt.genSaltSync(SALT_ROUND);
+    const hash = bcrypt.hashSync(plainPassword, salt);
+    return hash;
+  }
+
   function handleLogin(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const hashed = hashPassword(loginInfo.password);
+    console.log("로그인 정보 출력:", { ...loginInfo, password: hashed });
   }
 
   function onChange(e: React.FormEvent<HTMLInputElement>) {
