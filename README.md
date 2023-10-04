@@ -1,1 +1,13 @@
-# 10월 원티드 프리온보딩 프론트엔드 사전과제 - 안보미
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
