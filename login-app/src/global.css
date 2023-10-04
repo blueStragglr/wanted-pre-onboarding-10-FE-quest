@@ -4,13 +4,6 @@
 
 * {
   margin: 0;
+  font-weight: 400;
   font-family: "Poppins", sans-serif;
-}
-
-body {
-  @apply bg-black text-white;
-}
-
-input {
-  @apply text-black;
 }
