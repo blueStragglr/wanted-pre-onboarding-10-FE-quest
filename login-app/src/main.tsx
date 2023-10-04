@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import LoginPage from "@/pages/LoginPage";
 import MockPage from "./pages/MockPage";
+import MoviePage from "./pages/MoviePage";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/mock",
     element: <MockPage />,
+  },
+  {
+    path: "/movie",
+    element: <MoviePage />,
   },
 ]);
 
