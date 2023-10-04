@@ -11,3 +11,11 @@ pnpm dev
 # or
 bun dev
 ```
+
+## Page 1 구현
+
+-   `/login`
+
+## Page 2 구현
+
+-   `/`
