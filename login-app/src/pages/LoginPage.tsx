@@ -1,7 +1,11 @@
 import User from "@/icons/User";
 import LockClosed from "@/icons/LockClosed";
+import { useState } from "react";
 
 const LoginPage = () => {
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-700">
       <main className="flex w-[420px] flex-col  bg-purple-700 text-white">
@@ -14,6 +18,8 @@ const LoginPage = () => {
               placeholder="Username"
               required
               className="h-full w-full rounded-[40px] border-2 border-white border-opacity-20 bg-transparent outline-none placeholder:text-white"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <User className="h-6 w-6" />
           </div>
@@ -23,6 +29,8 @@ const LoginPage = () => {
               placeholder="Password"
               required
               className="h-full w-full rounded-[40px] border-2 border-white border-opacity-20 bg-transparent outline-none placeholder:text-white"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <LockClosed className="h-6 w-6" />
           </div>
@@ -39,6 +47,14 @@ const LoginPage = () => {
               Don't have an account? <a href="#">Register</a>
             </p>
           </div>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              console.log(username, password);
+            }}
+          >
+            Debug
+          </button>
         </form>
       </main>
     </div>
