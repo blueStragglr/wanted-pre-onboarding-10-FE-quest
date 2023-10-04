@@ -1,0 +1,31 @@
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    margin: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    gap: 16px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+form label input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ccc;
+    cursor: pointer;
+}
