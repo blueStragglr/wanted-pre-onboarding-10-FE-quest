@@ -1,0 +1,16 @@
+.headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 40%;
+  min-width: 100px;
+
+  & p {
+    margin-right: 0.5rem;
+  }
+  
+  & button {
+    max-width: 100px;
+    margin-bottom: 0;
+  }
+}

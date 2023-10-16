@@ -53,9 +53,9 @@ export default function Menu() {
             </ul>
           )}
       </div>
-      <div className={classes.bottomArea}>
+      {/* <div className={classes.bottomArea}>
         <Link to={"/"}>Home으로 돌아가기 &rarr;</Link>
-      </div>
+      </div> */}
     </div>
   )
 }
