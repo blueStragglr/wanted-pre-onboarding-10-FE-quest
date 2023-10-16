@@ -1,3 +1,8 @@
+🔗 [블로그에 정리한 STUDY NOTE](https://faystory.tistory.com/entry/%EC%9B%90%ED%8B%B0%EB%93%9C-%ED%94%84%EB%A6%AC%EC%98%A8%EB%B3%B4%EB%94%A9-FE-%EC%B1%8C%EB%A6%B0%EC%A7%80-10%EC%9B%94-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84-%ED%95%98%EB%82%98%EB%B6%80%ED%84%B0-%EC%97%B4%EA%B9%8C%EC%A7%80) <br />
+🔗 [과제 Pull Request](https://github.com/blueStragglr/wanted-pre-onboarding-10-FE-quest/pull/105)
+
+<br />
+
 # 10월 원티드 프리온보딩 프론트엔드 사전과제
 
 수강생 여러분 안녕하세요 :)
@@ -8,7 +13,7 @@
 
 제출을 위해 PR을 머지하실 필요는 없습니다. 
 
-PR을 생성하신 후, 구글 설문지(https://forms.gle/Y4xBHGSgCMdfEA3M6  )를 통해 PR 링크를 제출해 주시면 제출이 완료됩니다.
+PR을 생성하신 후, 구글 설문지(https://forms.gle/Y4xBHGSgCMdfEA3M6)를 통해 PR 링크를 제출해 주시면 제출이 완료됩니다.
 
 
 ## 만들어야 할 것
