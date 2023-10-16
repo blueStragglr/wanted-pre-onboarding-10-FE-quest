@@ -6,47 +6,11 @@ export class UsersService {
   private readonly users: User[] = [
     {
       userId: 0,
-      username: "blue",
-      password: "1234!@#$",
+      username: "test",
+      password: "qwer1234",
       userInfo: {
-        name: "blueStragglr",
+        name: "testAcoount",
         roles: ['user', 'admin']
-      },
-    },
-    {
-      userId: 1,
-      username: "white",
-      password: "1234!@#$",
-      userInfo: {
-        name: "whiteDwarf",
-        roles: ['user']
-      },
-    },
-    {
-      userId: 2,
-      username: "red",
-      password: "1234!@#$",
-      userInfo: {
-        name: "redGiant",
-        roles: ['user']
-      },
-    },
-    {
-      userId: 3,
-      username: "red",
-      password: "1234!@#$",
-      userInfo: {
-        name: "redGiant",
-        roles: ['user']
-      },
-    },
-    {
-      userId: 4,
-      username: "red",
-      password: "1234!@#$",
-      userInfo: {
-        name: "redGiant",
-        roles: ['user']
       },
     },
   ];
